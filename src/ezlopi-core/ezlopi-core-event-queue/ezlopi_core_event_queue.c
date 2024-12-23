@@ -3,9 +3,9 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 static QueueHandle_t generic_queue = NULL;
 

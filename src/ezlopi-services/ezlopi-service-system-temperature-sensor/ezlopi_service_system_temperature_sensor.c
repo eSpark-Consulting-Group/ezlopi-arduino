@@ -7,17 +7,17 @@
 #include "driver/temp_sensor.h"
 #include "esp_err.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_setting_commands.h"
-#include "ezlopi_core_actions.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_valueformatter.h"
-#include "ezlopi_core_device_value_updated.h"
+#include "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h"
+#include "ezlopi-core/ezlopi-core-actions/ezlopi_core_actions.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-valueformatter/ezlopi_core_valueformatter.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_value_updated.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_service_system_temperature_sensor.h"
+#include "ezlopi-services/ezlopi-service-system-temperature-sensor/ezlopi_service_system_temperature_sensor.h"
 
 static temp_sensor_config_t device_tempeature_sensor_configuration = TSENS_CONFIG_DEFAULT();
 static bool system_temperature_initialized = false;

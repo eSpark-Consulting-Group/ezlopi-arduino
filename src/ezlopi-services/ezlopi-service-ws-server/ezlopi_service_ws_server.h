@@ -1,8 +1,8 @@
 #ifndef __EZLOPI_SERVICE_WS_SERVER_H__
 #define __EZLOPI_SERVICE_WS_SERVER_H__
 
-#include "cjext.h"
-#include "ezlopi_service_ws_server_clients.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server_clients.h"
 
 typedef enum e_ws_status
 {

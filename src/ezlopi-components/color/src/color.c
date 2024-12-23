@@ -21,9 +21,9 @@
  * SOFTWARE.
  */
 
-#include "color.h"
+#include "ezlopi-components/color/include/color.h"
 #include <math.h>
-#include <lib8tion.h>
+#include "ezlopi-components/lib8tion/include/lib8tion.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 

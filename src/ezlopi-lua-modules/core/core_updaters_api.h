@@ -1,7 +1,7 @@
 #ifndef __CORE_UPDATERS_API_H__
 #define __CORE_UPDATERS_API_H__
 
-#include "lua/lua.h"
+#include "ezlopi-components/lua/lua.h"
 
 int lcore_update_item_value(lua_State *lua_state);
 int lcore_update_item_value_with_min_max(lua_State *lua_state);

@@ -2,19 +2,19 @@
 #include <stdint.h>
 #include <time.h>
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_heap.h"
-#include "ezlopi_core_actions.h"
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_devices_list.h"
+#include "ezlopi-core/ezlopi-core-heap/ezlopi_core_heap.h"
+#include "ezlopi-core/ezlopi-core-actions/ezlopi_core_actions.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
 
-#include "ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
 
 #define MAX_LEN(str1_len, str2_len) ((str1_len > str2_len) ? str1_len : str2_len)
 typedef struct s_loop_node

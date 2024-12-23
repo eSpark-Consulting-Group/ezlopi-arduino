@@ -2,10 +2,10 @@
 #define __HUB_SETTINGS_H__
 
 #include <string.h>
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_settings.h"
-#include "ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-settings/ezlopi_core_settings.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
 
 #ifdef __cplusplus
 extern "C"

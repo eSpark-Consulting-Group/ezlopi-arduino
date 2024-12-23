@@ -1,11 +1,11 @@
 
-#include "cjext.h"
-#include "ezlopi_util_trace.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_setting_commands.h"
+#include "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_cloud_hub_data_list.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-hub-data-list/ezlopi_cloud_hub_data_list.h"
 
 static void ezlopi_core_hub_data_list_populate_settings_json(cJSON *cj_result_name, const char* field_str, const char *name_str)
 {

@@ -1,4 +1,4 @@
-#include "core_adders_api.h"
+#include "ezlopi-lua-modules/core/core_adders_api.h"
 
 int lcore_add_device(lua_State *lua_state) { return 0; }
 int lcore_add_item(lua_State *lua_state) { return 0; }

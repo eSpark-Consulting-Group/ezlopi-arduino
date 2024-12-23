@@ -1,19 +1,19 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_http.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_device_group.h"
-#include "ezlopi_core_scenes_v2.h"
-#include "ezlopi_core_scenes_edit.h"
-#include "ezlopi_core_scenes_expressions.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-http/ezlopi_core_http.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_group.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_edit.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_expressions.h"
 #include "ezlopi_core_scenes_when_methods_helper_functions.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 //------------------------------- ezlopi_scene_when_is_itemState ------------------------------------------
 static int __compare_item_values(l_ezlopi_item_t *curr_item, l_fields_v2_t *value_field)

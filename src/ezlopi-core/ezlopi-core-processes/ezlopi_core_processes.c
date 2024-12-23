@@ -2,13 +2,13 @@
 #include "stdlib.h"
 #include "stdbool.h"
 #include "string.h"
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 
 #if defined(CONFIG_FREERTOS_USE_TRACE_FACILITY)
 typedef struct

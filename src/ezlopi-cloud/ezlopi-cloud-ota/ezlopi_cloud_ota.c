@@ -1,23 +1,23 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_ENABLE_OTA
 
 #include <string.h>
 #include <ctype.h>
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_util_version.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-version/ezlopi_util_version.h"
 
-#include "ezlopi_cloud_data.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-data/ezlopi_cloud_data.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_ota.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_devices_list.h"
-#include "ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-ota/ezlopi_core_ota.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
 
 
 void firmware_update_start(cJSON* cj_request, cJSON* cj_response)

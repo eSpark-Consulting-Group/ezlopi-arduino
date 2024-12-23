@@ -1,16 +1,16 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_UTIL_TRACE_EN
 
 #include <stdbool.h>
 #include <string.h>
 
-#include "ezlopi_core_log.h"
-#include "ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_cloud_log.h"
+#include "ezlopi-cloud/ezlopi-cloud-log/ezlopi_cloud_log.h"
 
 
 void ezlopi_hub_cloud_log_set(cJSON* cj_request, cJSON* cj_response)

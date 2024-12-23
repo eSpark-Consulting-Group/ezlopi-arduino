@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_service_ws_server.h"
-#include "ezlopi_service_ws_server_clients.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server.h"
+#include "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server_clients.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static uint32_t __number_of_clients = 0;
 static l_ws_server_client_conn_t *l_client_conn_head = NULL;

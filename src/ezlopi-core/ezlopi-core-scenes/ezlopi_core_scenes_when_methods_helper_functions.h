@@ -5,7 +5,7 @@
 
 #include <time.h>
 #include <stdint.h>
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
 typedef enum e_isdate_modes
 {

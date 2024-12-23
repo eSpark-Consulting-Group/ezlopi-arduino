@@ -1,29 +1,29 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include <string.h>
 #include <stdlib.h>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-#include "ezlopi_util_trace.h"
-#include "lua/lua.h"
-#include "lua/lualib.h"
-#include "lua/lauxlib.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-components/lua/lua.h"
+#include "ezlopi-components/lua/lualib.h"
+#include "ezlopi-components/lua/lauxlib.h"
 
-#include "corelib.h"
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_cloud.h"
-#include "ezlopi_core_scenes_scripts.h"
+#include "ezlopi-lua-modules/core/corelib.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-cloud/ezlopi_core_cloud.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_scripts.h"
 #include "ezlopi_core_scenes_scripts_custom_libs_includes.h"
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static l_ezlopi_scenes_script_t *script_head = NULL;
 

@@ -1,16 +1,16 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
 #include <string.h>
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_scenes_cjson.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_scenes_value.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_cjson.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_value.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
 static void __cjson_add_fields(cJSON *cj_block, l_fields_v2_t *fields);
 static void __cjson_add_string(cJSON *root, const char *key, const char *value);

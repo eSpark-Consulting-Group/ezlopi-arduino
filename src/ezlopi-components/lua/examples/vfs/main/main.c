@@ -11,7 +11,7 @@
 #include <esp_err.h>
 #include <esp_log.h>
 
-#include "ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 
 static const char *TAG = "LUA-VFS";
 

@@ -1,15 +1,15 @@
 #include <string.h>
-#include "lua/lua.h"
-#include "lua/lauxlib.h"
+#include "ezlopi-components/lua/lua.h"
+#include "ezlopi-components/lua/lauxlib.h"
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_util_version.h"
-#include "core_getters_api.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_gateway.h"
-#include "ezlopi_cloud_constants.h"
-#include "lua_helper_functions.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-version/ezlopi_util_version.h"
+#include "ezlopi-lua-modules/core/core_getters_api.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-gateway/ezlopi_core_gateway.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-lua-modules/helper_functions/lua_helper_functions.h"
 
 static int __create_lua_table_for_gateway(lua_State *lua_state, s_ezlopi_gateway_t *gateway_prop);
 static int __create_lua_table_for_device(lua_State *lua_state, l_ezlopi_device_t *device_prop);

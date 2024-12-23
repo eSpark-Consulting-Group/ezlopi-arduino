@@ -1,11 +1,11 @@
 
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_ENABLE_LED_INDICATOR
 
-#include "ezlopi_service_loop.h"
-#include "ezlopi_service_led_indicator.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-led-indicator/ezlopi_service_led_indicator.h"
 
 #include "driver/rmt.h"
 #include "led_strip.h"
@@ -16,11 +16,11 @@
 #include "driver/gpio.h"
 #include "driver/ledc.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_ping.h"
-#include "ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-ping/ezlopi_core_ping.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 
 static void __indicator_LED_loop(void *arg);
 

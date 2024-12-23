@@ -12,9 +12,9 @@
 #include "esp_event.h"
 #include "esp_http_client.h"
 // #include "esp_crt_bundle.h"
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 #ifdef __cplusplus
 extern "C"

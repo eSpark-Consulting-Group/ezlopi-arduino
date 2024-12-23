@@ -38,8 +38,8 @@ extern "C"
 #include <stdint.h>
 #include <string.h>
 
-#include "ezlopi_util_trace.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #ifndef __FILENAME__
 #define __FILENAME__ (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)

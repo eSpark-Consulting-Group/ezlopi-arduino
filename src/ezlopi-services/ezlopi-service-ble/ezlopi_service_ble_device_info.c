@@ -1,12 +1,12 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 
 #include <string.h>
 #include <ctype.h>
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include "lwip/ip_addr.h"
 #include "esp_event_base.h"
 #include "esp_chip_info.h"
@@ -17,27 +17,27 @@
 #include "esp_system.h"
 #include "esp_idf_version.h"
 
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_ping.h"
-#include "ezlopi_core_ble_gatt.h"
-#include "ezlopi_core_ble_buffer.h"
-#include "ezlopi_core_ble_profile.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_sntp.h"
-#include "ezlopi_core_info.h"
-#include "ezlopi_core_reset.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-ping/ezlopi_core_ping.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_gatt.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_buffer.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_profile.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-info/ezlopi_core_info.h"
+#include "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h"
 
-#include "ezlopi_hal_system_info.h"
+#include "ezlopi-hal/ezlopi-hal-sysinfo/ezlopi_hal_system_info.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_util_version.h"
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-version/ezlopi_util_version.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_service_ble.h"
+#include "ezlopi-services/ezlopi-service-ble/ezlopi_service_ble.h"
 
 static s_gatt_service_t *g_device_info_service = NULL;
 

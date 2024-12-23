@@ -1,43 +1,43 @@
 #include <stdio.h>
-// #include <cjext.h>
+#include <cjext.h>
 
 #include <esp_system.h>
 #include <driver/adc.h>
 #include <driver/i2c.h>
 #include <driver/gpio.h>
-// #include <mbedtls/config.h>
+#include <mbedtls/config.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <esp_heap_caps.h>
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
 #include "ezlopi_core_ezlopi.h"
-#include "ezlopi_service_ota.h"
-#include "ezlopi_core_log.h"
-#include "ezlopi_core_reset.h"
-#include "ezlopi_core_setting_commands.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_factory_info.h"
+#include "ezlopi-services/ezlopi-service-ota/ezlopi_service_ota.h"
+#include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
+#include "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h"
+#include "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
 
-#include "ezlopi_service_ble.h"
-#include "ezlopi_service_otel.h"
-#include "ezlopi_service_uart.h"
-#include "ezlopi_service_loop.h"
-#include "ezlopi_service_modes.h"
-#include "ezlopi_service_meshbot.h"
-#include "ezlopi_service_gpioisr.h"
-#include "ezlopi_service_webprov.h"
-#include "ezlopi_service_ws_server.h"
+#include "ezlopi-services/ezlopi-service-ble/ezlopi_service_ble.h"
+#include "ezlopi-services/ezlopi-service-otel/ezlopi_service_otel.h"
+#include "ezlopi-services/ezlopi-service-uart/ezlopi_service_uart.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-modes/ezlopi_service_modes.h"
+#include "ezlopi-services/ezlopi-service-meshbot/ezlopi_service_meshbot.h"
+#include "ezlopi-services/ezlopi-service-gpioisr/ezlopi_service_gpioisr.h"
+#include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
+#include "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server.h"
 #include "ezlopi_service_broadcast.h"
-#include "ezlopi_service_led_indicator.h"
-#include "ezlopi_service_system_temperature_sensor.h"
+#include "ezlopi-services/ezlopi-service-led-indicator/ezlopi_service_led_indicator.h"
+#include "ezlopi-services/ezlopi-service-system-temperature-sensor/ezlopi_service_system_temperature_sensor.h"
 
-#include "pt.h"
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_ble_config.h"
+#include "ezlopi-components/pt/pt.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_config.h"
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static void __blinky(void *pv);
 

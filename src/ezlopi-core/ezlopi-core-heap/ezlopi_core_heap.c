@@ -6,8 +6,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_heap.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-heap/ezlopi_core_heap.h"
 
 #warning "################### DO NOT USE printf ON PRODUCTION ###################"
 

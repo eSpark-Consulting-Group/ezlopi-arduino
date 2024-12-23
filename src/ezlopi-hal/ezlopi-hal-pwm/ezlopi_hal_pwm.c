@@ -2,9 +2,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "ezlopi_hal_pwm.h"
-#include "ezlopi_util_trace.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-hal/ezlopi-hal-pwm/"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 struct s_ezlopi_pwm_object
 {

@@ -29,9 +29,9 @@
 #include <ctype.h>
 #include <float.h>
 
-#include "cjext.h"
-#include "ezlopi_util_trace.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 typedef struct
 {

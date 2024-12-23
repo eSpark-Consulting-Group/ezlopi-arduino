@@ -4,10 +4,10 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/semphr.h"
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_hal_i2c_master.h"
+#include "ezlopi-hal/ezlopi-hal-i2c/ezlopi_hal_i2c_master.h"
 
 static s_ezlopi_i2c_master_t *i2c_master_conf_ptr[I2C_NUM_MAX] = {NULL, NULL};
 

@@ -3,7 +3,7 @@
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
 void scenes_scripts_add(cJSON* cj_request, cJSON* cj_response);
 void scenes_scripts_get(cJSON* cj_request, cJSON* cj_response);

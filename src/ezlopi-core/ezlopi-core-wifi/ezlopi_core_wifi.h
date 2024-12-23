@@ -3,9 +3,9 @@
 
 #include "esp_netif_types.h"
 #include "esp_wifi_types.h"
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -7,7 +7,7 @@
 #include <lua/lauxlib.h>
 #include <lua/lualib.h>
 
-#include "ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 
 #define LUA_MAX_MEMSIZE 0x10000 // 64k
 

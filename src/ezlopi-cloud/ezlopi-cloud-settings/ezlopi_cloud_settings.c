@@ -1,15 +1,15 @@
 #include <string.h>
 #include <stdint.h>
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_cloud_settings.h"
-#include "ezlopi_core_devices_list.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_cloud_methods_str.h"
+#include "ezlopi-cloud/ezlopi-cloud-settings/ezlopi_cloud_settings.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_methods_str.h"
 
-#include "ezlopi_service_webprov.h"
+#include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
 
 void ezlopi_device_settings_list_v3(cJSON* cj_request, cJSON* cj_response)
 {

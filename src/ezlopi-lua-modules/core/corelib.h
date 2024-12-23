@@ -1,9 +1,9 @@
 #ifndef __CORELIB_H__
 #define __CORELIB_H__
 
-#include "lua/lua.h"
-#include "lua/lauxlib.h"
-#include "lua/lstate.h"
+#include "ezlopi-components/lua/lua.h"
+#include "ezlopi-components/lua/lauxlib.h"
+#include "ezlopi-components/lua/lstate.h"
 
 int luaopen_lcore(lua_State *lua_state);
 

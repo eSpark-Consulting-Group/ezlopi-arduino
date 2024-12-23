@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "ezlopi_core_offline_login.h"
+#include "ezlopi-core/ezlopi-core-offline-login/ezlopi_core_offline_login.h"
 
-#include "ezlopi_core_devices_list.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
 static void ezlopi_cloud_prepare_error(cJSON *cj_response, int error_code, const char *error_message, const char *error_data)
 {

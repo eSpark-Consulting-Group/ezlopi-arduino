@@ -1,13 +1,13 @@
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_cloud_coordinates.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-coordinates/ezlopi_cloud_coordinates.h"
 
 static double sg_latitude;
 static double sg_longitude;

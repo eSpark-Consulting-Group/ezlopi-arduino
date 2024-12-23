@@ -13,12 +13,12 @@
 #include "esp_crt_bundle.h"
 // #endif
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_http.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_errors.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-core/ezlopi-core-http/ezlopi_core_http.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static void ezlopi_http_free_rx_data(s_rx_chunk_t *rx_chunks);
 static esp_err_t ezlopi_http_event_handler(esp_http_client_event_t *evt);

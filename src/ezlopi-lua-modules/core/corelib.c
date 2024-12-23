@@ -1,19 +1,19 @@
 
-#include "lua/lua.h"
-#include "lua/lauxlib.h"
-#include "lua/lstate.h"
+#include "ezlopi-components/lua/lua.h"
+#include "ezlopi-components/lua/lauxlib.h"
+#include "ezlopi-components/lua/lstate.h"
 
-#include "ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
 
-#include "corelib.h"
-#include "ezlopi_util_trace.h"
+#include "ezlopi-lua-modules/core/corelib.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "core_getters_api.h"
-#include "core_adders_api.h"
-#include "core_removers_api.h"
-#include "core_updaters_api.h"
-#include "core_others_api.h"
-#include "core_external_gateway_api.h"
+#include "ezlopi-lua-modules/core/core_getters_api.h"
+#include "ezlopi-lua-modules/core/core_adders_api.h"
+#include "ezlopi-lua-modules/core/core_removers_api.h"
+#include "ezlopi-lua-modules/core/core_updaters_api.h"
+#include "ezlopi-lua-modules/core/core_others_api.h"
+#include "ezlopi-lua-modules/core/core_external_gateway_api.h"
 
 static const struct luaL_Reg lcore_funcs[] = {
 #define CORELIB_FUNCTION(f_name, l_func) {.name = f_name, .func = l_func},

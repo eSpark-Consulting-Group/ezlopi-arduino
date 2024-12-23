@@ -38,7 +38,7 @@
 #include <driver/gpio.h>
 #include <esp_err.h>
 #include <driver/rmt.h>
-#include "color.h"
+#include "ezlopi-components/color/include/color.h"
 #include <color_codes.h>
 
 #ifdef __cplusplus

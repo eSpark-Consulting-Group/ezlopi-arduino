@@ -1,4 +1,4 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 #ifdef CONFIG_EZPI_ENABLE_PING
 
 #include <string.h>
@@ -12,12 +12,12 @@
 #include "lwip/netdb.h"
 #include "lwip/sockets.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "./ezlopi-ping/ping_sock.h"
+#include "ezlopi-core/ezlopi-core-ping/ezlopi_core_ping.h"
 
-#include "ezlopi_core_setting_commands.h"
-#include "ezlopi_core_ping.h"
+#include "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h"
+#include "ezlopi-core/ezlopi-core-ping/ezlopi_core_ping.h"
 
 static uint32_t __ping_fail_count = 0;
 static esp_ping_handle_t __ping_handle = NULL;

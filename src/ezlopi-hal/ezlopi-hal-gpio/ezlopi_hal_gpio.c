@@ -1,5 +1,5 @@
-// #include "ezlopi_hal_gpio.h"
-// #include "ezlopi_core_devices.h"
+// #include "ezlopi-hal/ezlopi-hal-gpio/ezlopi_hal_gpio.h"
+// #include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
 
 // int ezlopi_gpio_init(s_ezlopi_device_properties_t *properties)
 // {

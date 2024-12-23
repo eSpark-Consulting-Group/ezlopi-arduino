@@ -2,7 +2,7 @@
 #include <time.h>
 
 // #include "config.h"
-#include "ezlopi_util_uuid.h"
+#include "ezlopi-util/ezlopi-util-uuid/ezlopi_util_uuid.h"
 
 const unsigned char hex[16] = "0123456789abcdef";
 

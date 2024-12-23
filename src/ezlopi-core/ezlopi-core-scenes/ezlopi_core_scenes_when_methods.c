@@ -1,28 +1,28 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
 #include <time.h>
 #include <string.h>
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_modes.h"
-#include "ezlopi_core_sntp.h"
-#include "ezlopi_core_ota.h"
-#include "ezlopi_core_http.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_device_group.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_scenes_operators.h"
-#include "ezlopi_core_scenes_expressions.h"
-#include "ezlopi_core_websocket_client.h"
-#include "ezlopi_core_scenes_when_methods.h"
-#include "ezlopi_core_scenes_status_changed.h"
+#include "ezlopi-core/ezlopi-core-modes/ezlopi_core_modes.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-ota/ezlopi_core_ota.h"
+#include "ezlopi-core/ezlopi-core-http/ezlopi_core_http.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_group.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_operators.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_expressions.h"
+#include "ezlopi-core/ezlopi-core-websocket_client/ezlopi_core_websocket_client.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_when_methods.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_status_changed.h"
 #include "ezlopi_core_scenes_when_methods_helper_functions.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_service_meshbot.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-services/ezlopi-service-meshbot/ezlopi_service_meshbot.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
 int ezlopi_scene_when_is_item_state(l_scenes_list_v2_t *scene_node, void *arg)
 {

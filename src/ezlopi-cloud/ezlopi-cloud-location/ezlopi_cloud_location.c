@@ -4,13 +4,13 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-#include "cjext.h"
-#include "zones.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-components/micro_tz_db/zones.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_sntp.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
 
 void EZPI_CLOUD_location_list(cJSON* cj_request, cJSON* cj_response)
 {

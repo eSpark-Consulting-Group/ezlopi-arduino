@@ -1,12 +1,12 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 #include "esp_intr_alloc.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_hal_spi_master.h"
+#include "ezlopi-hal/ezlopi-hal-spi/ezlopi_hal_spi_master.h"
 
 typedef enum e_spi_state
 {

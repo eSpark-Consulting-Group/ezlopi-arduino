@@ -1,4 +1,4 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_UTIL_TRACE_EN
 
@@ -7,18 +7,18 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_heap.h"
-#include "ezlopi_core_sntp.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-heap/ezlopi_core_heap.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_log.h"
+#include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
 
 const char* ezlopi_log_severity_enum[ENUM_EZLOPI_TRACE_SEVERITY_MAX] = {
     "NONE",

@@ -1,12 +1,12 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_errors.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #define UPDATE_STRING_VALUE(buffer, data, offset, length)  \
     {                                                      \

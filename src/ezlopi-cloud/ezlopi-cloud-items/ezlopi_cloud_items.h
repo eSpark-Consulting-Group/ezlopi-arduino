@@ -3,8 +3,8 @@
 
 #include <string.h>
 
-#include "cjext.h"
-#include "ezlopi_core_devices_list.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
 
 #ifdef __cplusplus
 extern "C"

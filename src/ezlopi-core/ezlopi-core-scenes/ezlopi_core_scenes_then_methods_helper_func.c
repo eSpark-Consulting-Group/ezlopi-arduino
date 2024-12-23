@@ -1,23 +1,23 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
 #include <string.h>
-#include "cjext.h"
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_http.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_device_group.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_scenes_v2.h"
-#include "ezlopi_core_scenes_value.h"
-#include "ezlopi_core_scenes_expressions.h"
-#include "ezlopi_core_scenes_then_methods_helper_func.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-http/ezlopi_core_http.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_group.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_value.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_expressions.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_then_methods_helper_func.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #define STR_SIZE(str) ((NULL != str) ? (strlen(str)) : 0)
 

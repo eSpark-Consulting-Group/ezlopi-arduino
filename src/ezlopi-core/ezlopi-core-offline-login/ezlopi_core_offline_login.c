@@ -1,9 +1,9 @@
 
-#include "cjext.h"
-#include "ezlopi_core_nvs.h"
-#include "EZLOPI_USER_CONFIG.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_offline_login.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-offline-login/ezlopi_core_offline_login.h"
 
 #define BYPASS_LOGIN 1
 

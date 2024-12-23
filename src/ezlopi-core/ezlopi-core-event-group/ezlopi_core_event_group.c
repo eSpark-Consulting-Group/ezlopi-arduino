@@ -4,10 +4,10 @@
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
 
 static EventGroupHandle_t ezlopi_event_group_handle = NULL;
 

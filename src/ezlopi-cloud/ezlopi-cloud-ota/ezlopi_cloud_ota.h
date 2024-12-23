@@ -1,14 +1,14 @@
 #ifndef __HUB_FIRMWARE_H__
 #define __HUB_FIRMWARE_H__
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_ENABLE_OTA
 
 #include <string.h>
 
-#include "cjext.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #ifdef __cplusplus
 extern "C"

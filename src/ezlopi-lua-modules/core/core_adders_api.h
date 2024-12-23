@@ -1,7 +1,7 @@
 #ifndef __CORE_ADDERS_API_H__
 #define __CORE_ADDERS_API_H__
 
-#include "lua/lua.h"
+#include "ezlopi-components/lua/lua.h"
 
 int lcore_add_device(lua_State *lua_state);
 int lcore_add_item(lua_State *lua_state);

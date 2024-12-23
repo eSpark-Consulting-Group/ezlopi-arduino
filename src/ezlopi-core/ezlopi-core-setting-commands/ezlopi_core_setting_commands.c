@@ -1,13 +1,13 @@
 
-#include "ezlopi_util_trace.h"
-#include "cjext.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_log.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_setting_commands.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
 const char *ezlopi_core_setting_command_names[SETTING_COMMAND_NAME_MAX] = {
     "scale.temperature",

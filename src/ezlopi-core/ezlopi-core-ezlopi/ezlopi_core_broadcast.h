@@ -5,9 +5,9 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdint.h>
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 typedef ezlopi_error_t (*f_broadcast_method_t)(char* data);
 

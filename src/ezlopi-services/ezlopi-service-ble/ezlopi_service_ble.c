@@ -1,5 +1,5 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 
@@ -9,11 +9,11 @@
 
 #include "esp_system.h"
 #include "esp_log.h"
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include "lwip/ip_addr.h"
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #include "esp_bt.h"
 #include "esp_gap_ble_api.h"
@@ -22,15 +22,15 @@
 #include "esp_bt_main.h"
 #include "esp_gatt_common_api.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_ble_gap.h"
-#include "ezlopi_core_ble_gatt.h"
-#include "ezlopi_core_ble_profile.h"
-#include "ezlopi_core_ble_buffer.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_gap.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_gatt.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_profile.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_buffer.h"
 
-#include "ezlopi_service_ble.h"
+#include "ezlopi-services/ezlopi-service-ble/ezlopi_service_ble.h"
 
 extern void ezlopi_ble_service_security_init(void);
 extern void ezlopi_ble_service_wifi_profile_init(void);

@@ -1,4 +1,4 @@
-#include "ezlopi_core_wifi_err_reason.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi_err_reason.h"
 
 const char *ezlopi_wifi_err_reason_str(wifi_err_reason_t wifi_err)
 {

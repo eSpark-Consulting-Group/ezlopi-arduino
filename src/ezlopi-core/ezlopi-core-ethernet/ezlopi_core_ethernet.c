@@ -5,11 +5,11 @@
 #include "esp_event.h"
 #include "driver/gpio.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_ethernet.h"
+#include "ezlopi-core/ezlopi-core-ethernet/ezlopi_core_ethernet.h"
 
-#include "ezlopi_hal_spi_master.h"
+#include "ezlopi-hal/ezlopi-hal-spi/ezlopi_hal_spi_master.h"
 
 static const char* eth_key_desc_str = "ezlopi_eth";
 static esp_netif_t* eth_netif_spi = NULL;

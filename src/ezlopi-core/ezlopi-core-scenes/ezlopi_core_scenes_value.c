@@ -1,11 +1,11 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_scenes_v2.h"
-#include "ezlopi_core_scenes_value.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_value.h"
 
 static const char* sg_scenes_value_type_name[] = {
 #define EZLOPI_VALUE_TYPE(type, name) name,

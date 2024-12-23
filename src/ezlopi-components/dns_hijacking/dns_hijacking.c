@@ -17,9 +17,9 @@
 
 #include <byteswap.h>
 
-#include "ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 
-#include "dns_hijacking.h"
+#include "ezlopi-components/dns_hijacking/dns_hijacking.h"
 
 static const char* TAG = "dns_hijack_srv";
 

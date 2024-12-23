@@ -66,7 +66,7 @@
 #ifndef __BSEC_INTERFACE_MULTI_H__
 #define __BSEC_INTERFACE_MULTI_H__
 
-#include "bsec_datatypes.h"
+#include "ezlopi-components/Bosch_BSEC2/bsec_interface/bsec_datatypes.h"
 
 #ifdef __cplusplus
  extern "C" {

@@ -1,29 +1,29 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_sntp.h"
-#include "ezlopi_core_cloud.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_scenes_v2.h"
-#include "ezlopi_core_scenes_edit.h"
-#include "ezlopi_core_scenes_cjson.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_scenes_value.h"
-#include "ezlopi_core_scenes_print.h"
-#include "ezlopi_core_scenes_methods.h"
-#include "ezlopi_core_scenes_when_methods.h"
-#include "ezlopi_core_scenes_then_methods.h"
-#include "ezlopi_core_scenes_status_changed.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-cloud/ezlopi_core_cloud.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_edit.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_cjson.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_value.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_print.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_methods.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_when_methods.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_then_methods.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_status_changed.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_service_meshbot.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-services/ezlopi-service-meshbot/ezlopi_service_meshbot.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static l_scenes_list_v2_t *scenes_list_head_v2 = NULL;
 

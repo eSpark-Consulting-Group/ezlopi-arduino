@@ -1,4 +1,4 @@
-#include "gateways_commands_str.h"
+#include "ezlopi-cloud/ezlopi-cloud-gateways/gateways_commands_str.h"
 
 const char *gw_addItemDictionaryValueCommand_str = "addItemDictionaryValueCommand";
 const char *gw_checkDeviceCommand_str = "checkDeviceCommand";

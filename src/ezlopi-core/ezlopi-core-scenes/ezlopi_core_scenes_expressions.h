@@ -7,8 +7,8 @@
 #include <inttypes.h>
 #include <stdbool.h>
 
-#include "ezlopi_core_scenes_v2.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 typedef struct s_exp_items
 {

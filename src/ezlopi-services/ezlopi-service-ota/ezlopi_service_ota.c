@@ -1,32 +1,32 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_ENABLE_OTA
 
 #include <string.h>
 #include <bootloader_random.h>
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
 
-#include "ezlopi_cloud_ota.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-ota/ezlopi_cloud_ota.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_service_ota.h"
-#include "ezlopi_service_loop.h"
-#include "ezlopi_service_webprov.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-services/ezlopi-service-ota/ezlopi_service_ota.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 
 static void __ota_loop(void *arg);

@@ -4,13 +4,13 @@
 #include "nvs_flash.h"
 #include "esp_spiffs.h"
 #include "esp_wifi.h"
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_util_trace.h"
-#include "dns_hijacking.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-components/dns_hijacking/dns_hijacking.h"
 
-#include "ezlopi_service_uri.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-services/ezlopi-service-uri/ezlopi_service_uri.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static const char* error_page_data = "\
     <!DOCTYPE html>\

@@ -1,16 +1,16 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 
 #include <string.h>
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_ble_gap.h"
-#include "ezlopi_core_ble_profile.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_gap.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_profile.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static uint8_t adv_config_done = 0;
 #define ADV_CONFIG_FLAG (1 << 0)

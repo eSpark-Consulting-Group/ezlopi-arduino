@@ -1,16 +1,16 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 // #TODO ADD guard for key enable
 #include <string.h>
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_service_ble_ble_auth.h"
+#include "ezlopi-services/ezlopi-service-ble/ezlopi_service_ble_ble_auth.h"
 
 static e_auth_status_t sg_last_auth_status = BLE_AUTH_STATUS_UNKNOWN;
 

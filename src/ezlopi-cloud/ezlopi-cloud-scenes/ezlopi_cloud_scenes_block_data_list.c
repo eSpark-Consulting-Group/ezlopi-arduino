@@ -1,23 +1,23 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
 #include <string.h>
 #include <stdint.h>
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_cloud_scenes.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-scenes/ezlopi_cloud_scenes.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_scenes_v2.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_scenes_value.h"
-#include "ezlopi_core_scenes_operators.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_value.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_operators.h"
 
-#include "ezlopi_service_meshbot.h"
+#include "ezlopi-services/ezlopi-service-meshbot/ezlopi_service_meshbot.h"
 
 typedef struct s_data_source_n_target_object
 {

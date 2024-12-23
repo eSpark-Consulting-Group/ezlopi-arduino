@@ -1,13 +1,13 @@
 #include <time.h>
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_api.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_api_methods.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-api/ezlopi_core_api.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-api/ezlopi_core_api_methods.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
 
 static int __check_for_no_error(cJSON *cj_request);
 static cJSON *__execute_method(cJSON *cj_request, f_method_func_t method_func);

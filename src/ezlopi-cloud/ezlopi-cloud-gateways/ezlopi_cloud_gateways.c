@@ -1,12 +1,12 @@
 #include <string.h>
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_cloud.h"
-#include "ezlopi_core_gateway.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-cloud/ezlopi_core_cloud.h"
+#include "ezlopi-core/ezlopi-core-gateway/ezlopi_core_gateway.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_cloud_gateways.h"
-#include "gateways_commands_str.h"
+#include "ezlopi-cloud/ezlopi-cloud-gateways/ezlopi_cloud_gateways.h"
+#include "ezlopi-cloud/ezlopi-cloud-gateways/gateways_commands_str.h"
 
 void gateways_list(cJSON *cj_request, cJSON *cj_response)
 {

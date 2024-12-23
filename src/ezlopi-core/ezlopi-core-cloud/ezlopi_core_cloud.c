@@ -1,6 +1,6 @@
 #include <esp_system.h>
 
-#include "ezlopi_core_cloud.h"
+#include "ezlopi-core/ezlopi-core-cloud/ezlopi_core_cloud.h"
 
 #define CRC16_POLY 0x4460
 

@@ -3,14 +3,14 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_service_webprov.h"
-#include "ezlopi_service_ws_server.h"
+#include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
+#include "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
 
 void EZPI_CORE_reset_reboot(void)

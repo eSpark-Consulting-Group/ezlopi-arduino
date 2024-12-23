@@ -2,13 +2,13 @@
 
 #include <string.h>
 
-#include "cjext.h"
-#include "ezlopi_cloud_data.h"
-#include "ezlopi_util_trace.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-cloud/ezlopi-cloud-data/ezlopi_cloud_data.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_devices_list.h"
-#include "ezlopi_cloud_keywords.h"
-#include "ezlopi_cloud_methods_str.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_keywords.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_methods_str.h"
 
 void data_list(cJSON* cj_request, cJSON* cj_response)
 {

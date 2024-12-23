@@ -4,15 +4,15 @@
 #include "freertos/task.h"
 #include "freertos/queue.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_service_loop.h"
-#include "ezlopi_service_otel.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-otel/ezlopi_service_otel.h"
 #include "ezlopi_service_broadcast.h"
 
 static QueueHandle_t __broadcast_queue = NULL;

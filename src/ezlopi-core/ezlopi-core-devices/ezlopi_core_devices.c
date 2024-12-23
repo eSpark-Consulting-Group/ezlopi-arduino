@@ -1,16 +1,16 @@
 #include <ctype.h>
 
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_errors.h"
-#include "ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
 
-#include "ezlopi_core_reset.h"
-#include "ezlopi_cloud_items.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h"
+#include "ezlopi-cloud/ezlopi-cloud-items/ezlopi_cloud_items.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "EZLOPI_USER_CONFIG.h"
-#include "../../build/config/sdkconfig.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
+#include <sdkconfig.h>
 
 static l_ezlopi_device_t *l_device_head = NULL;
 

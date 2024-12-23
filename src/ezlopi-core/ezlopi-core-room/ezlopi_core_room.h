@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 typedef enum e_room_subtype
 {

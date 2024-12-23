@@ -5,10 +5,10 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_nvs.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static nvs_handle_t ezlopi_nvs_handle = 0;
 static const char* storage_name = "storage";

@@ -2,11 +2,11 @@
 #ifndef _EZLOPI_CORE_LOG_H_
 #define _EZLOPI_CORE_LOG_H_
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_UTIL_TRACE_EN
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 #include <stdbool.h>
 

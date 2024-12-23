@@ -10,7 +10,7 @@ typedef enum e_ping_status
     EZLOPI_PING_STATUS_DISCONNECTED,
 } e_ping_status_t;
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_ENABLE_PING
 

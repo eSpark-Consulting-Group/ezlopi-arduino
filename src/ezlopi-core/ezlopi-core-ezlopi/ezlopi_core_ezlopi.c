@@ -1,37 +1,37 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #include "esp_event.h"
 
-#include "EZLOPI_USER_CONFIG.h"
-#include "ezlopi_util_trace.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_log.h"
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_mdns.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_ping.h"
-#include "ezlopi_core_sntp.h"
-#include "ezlopi_core_room.h"
-#include "ezlopi_core_modes.h"
-#include "ezlopi_core_buffer.h"
+#include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-mdns/ezlopi_core_mdns.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-ping/ezlopi_core_ping.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-room/ezlopi_core_room.h"
+#include "ezlopi-core/ezlopi-core-modes/ezlopi_core_modes.h"
+#include "ezlopi-core/ezlopi-core-buffer/ezlopi_core_buffer.h"
 #include "ezlopi_core_event_queue.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_device_group.h"
-#include "ezlopi_core_devices_list.h"
-#include "ezlopi_core_scenes_scripts.h"
-#include "ezlopi_core_scenes_expressions.h"
-#include "ezlopi_core_log.h"
-#include "ezlopi_core_errors.h"
-#include "ezlopi_core_setting_commands.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_group.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_scripts.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_expressions.h"
+#include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h"
 
 #ifdef CONFIG_EZPI_CORE_ETHERNET_EN
-#include "ezlopi_core_ethernet.h"
+#include "ezlopi-core/ezlopi-core-ethernet/ezlopi_core_ethernet.h"
 #endif // CONFIG_EZPI_CORE_ETHERNET_EN
 
-#include "ezlopi_hal_system_info.h"
-#include "ezlopi_service_loop.h"
-#include "ezlopi_service_system_temperature_sensor.h"
+#include "ezlopi-hal/ezlopi-hal-sysinfo/ezlopi_hal_system_info.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-system-temperature-sensor/ezlopi_service_system_temperature_sensor.h"
 
 static void __device_loop(void *arg);
 static void ezlopi_initialize_devices_v3(void);

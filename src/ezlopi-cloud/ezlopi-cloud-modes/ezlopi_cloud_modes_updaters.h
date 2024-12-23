@@ -1,8 +1,8 @@
 #ifndef __EZLOPI_CLOUD_MODES_UPDATERS_H__
 #define __EZLOPI_CLOUD_MODES_UPDATERS_H__
 
-#include "cjext.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #if defined(CONFIG_EZPI_SERV_ENABLE_MODES)
 

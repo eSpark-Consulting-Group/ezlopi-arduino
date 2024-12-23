@@ -1,5 +1,5 @@
-#include "ld2410.h"
-#include "ezlopi_util_trace.h"
+#include "ezlopi-components/ld2410/ld2410.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
 esp_err_t ld2410_setup(s_ezlopi_uart_t uart_settings)
 {

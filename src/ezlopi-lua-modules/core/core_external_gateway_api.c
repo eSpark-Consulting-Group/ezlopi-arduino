@@ -1,4 +1,4 @@
-#include "core_external_gateway_api.h"
+#include "ezlopi-lua-modules/core/core_external_gateway_api.h"
 
 int lcore_get_local_time(lua_State *lua_state) { return 0; }
 int lcore_get_location(lua_State *lua_state) { return 0; }

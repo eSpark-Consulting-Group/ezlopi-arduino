@@ -1,13 +1,13 @@
 #include <string.h>
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "cjext.h"
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_room.h"
-#include "ezlopi_cloud_room.h"
-#include "ezlopi_core_devices_list.h"
-#include "ezlopi_cloud_keywords.h"
-#include "ezlopi_cloud_methods_str.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-room/ezlopi_core_room.h"
+#include "ezlopi-cloud/ezlopi-cloud-room/ezlopi_cloud_room.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_keywords.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_methods_str.h"
 
 void room_list(cJSON *cj_request, cJSON *cj_response)
 {

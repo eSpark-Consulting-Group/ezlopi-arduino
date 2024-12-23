@@ -1,7 +1,7 @@
 #ifndef _EZLOPI_CORE_EVENT_GROUP_H_
 #define _EZLOPI_CORE_EVENT_GROUP_H_
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 #define EZLOPI_EVENT_BASE 0x10
 

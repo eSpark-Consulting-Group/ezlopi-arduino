@@ -1,12 +1,12 @@
 #ifndef __EZLOPI_CORE_MODES_CJSON_H__
 #define __EZLOPI_CORE_MODES_CJSON_H__
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include <string.h>
 #include <stdint.h>
 
-#include "ezlopi_core_modes.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-modes/ezlopi_core_modes.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 #if defined(CONFIG_EZPI_SERV_ENABLE_MODES)
 

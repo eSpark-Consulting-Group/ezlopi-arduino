@@ -4,7 +4,7 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 
 #if CONFIG_IDF_TARGET_ESP32

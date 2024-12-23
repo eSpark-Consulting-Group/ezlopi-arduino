@@ -1,19 +1,19 @@
 #include <time.h>
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_room.h"
-#include "ezlopi_core_cloud.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-room/ezlopi_core_room.h"
+#include "ezlopi-core/ezlopi-core-cloud/ezlopi_core_cloud.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
-// #include "ezlopi_service_webprov.h"
+// #include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
 
 static s_ezlopi_room_t *l_room_head = NULL;
 

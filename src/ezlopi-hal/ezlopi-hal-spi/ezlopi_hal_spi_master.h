@@ -7,7 +7,7 @@
 
 #include "driver/spi_master.h"
 
-#include "ezlopi_core_errors.h" 
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h" 
 
 typedef enum e_ezlopi_spi_channel
 {

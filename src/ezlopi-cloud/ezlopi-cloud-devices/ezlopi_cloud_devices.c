@@ -1,19 +1,19 @@
 #include <string.h>
 #include "mbedtls/sha1.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_devices_list.h"
-#include "ezlopi_core_api_methods.h"
-#include "ezlopi_core_sntp.h"
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_device_group.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
+#include "ezlopi-core/ezlopi-core-api/ezlopi_core_api_methods.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_group.h"
 
-#include "ezlopi_cloud_devices.h"
-#include "ezlopi_cloud_keywords.h"
-#include "ezlopi_cloud_methods_str.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-devices/ezlopi_cloud_devices.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_keywords.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_methods_str.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 //------------------------------------------------------------------------------------------------------------------
 static char *__generate_sha1_of_src(const char *src)
 {

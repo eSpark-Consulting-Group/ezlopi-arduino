@@ -1,13 +1,13 @@
 #include <time.h>
 
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_sntp.h"
-#include "ezlopi_core_modes.h"
-#include "ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-modes/ezlopi_core_modes.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
 
-#include "ezlopi_cloud_modes.h"
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_cloud_modes_updaters.h"
+#include "ezlopi-cloud/ezlopi-cloud-modes/ezlopi_cloud_modes.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-modes/ezlopi_cloud_modes_updaters.h"
 
 #if defined(CONFIG_EZPI_SERV_ENABLE_MODES)
 void ezlopi_cloud_modes_switched(cJSON *cj_request, cJSON *cj_response)

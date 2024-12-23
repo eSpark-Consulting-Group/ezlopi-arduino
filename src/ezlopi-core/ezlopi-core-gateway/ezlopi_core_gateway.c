@@ -1,9 +1,9 @@
 
 #include <stdbool.h>
 
-#include "ezlopi_core_gateway.h"
+#include "ezlopi-core/ezlopi-core-gateway/ezlopi_core_gateway.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
 static s_ezlopi_gateway_t ezlopi_gateway = {
     .ready = true,

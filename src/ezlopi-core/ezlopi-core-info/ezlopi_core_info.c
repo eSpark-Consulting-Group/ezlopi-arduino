@@ -2,7 +2,7 @@
 
 #include "freertos/FreeRTOSConfig.h"
 #include "esp_netif_ip_addr.h"
-#include "ezlopi_core_info.h"
+#include "ezlopi-core/ezlopi-core-info/ezlopi_core_info.h"
 
 static const uint8_t EZPI_UART_SERV_FLW_CTRL_STR_SIZE = 10;
 

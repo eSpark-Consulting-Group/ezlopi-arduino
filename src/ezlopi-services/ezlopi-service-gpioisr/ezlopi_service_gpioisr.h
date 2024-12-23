@@ -1,7 +1,7 @@
 #ifndef _EZLOPI_SERVICE_GPIOISR_H_
 #define _EZLOPI_SERVICE_GPIOISR_H_
 
-#include "ezlopi_core_devices_list.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
 
 typedef void (*f_interrupt_upcall_t)(void *);
 

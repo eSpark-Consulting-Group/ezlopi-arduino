@@ -6,7 +6,7 @@
 #include <string.h>
 #include <stdint.h>
 
-#include "ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
 
 typedef enum e_scene_num_cmp_operators
 {

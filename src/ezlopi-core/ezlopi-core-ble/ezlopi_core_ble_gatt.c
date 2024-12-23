@@ -1,4 +1,4 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 
@@ -6,10 +6,10 @@
 
 #include "esp_gatt_common_api.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_ble_gap.h"
-#include "ezlopi_core_ble_profile.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_gap.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_profile.h"
 
 static uint16_t g_mtu_size = ESP_GATT_DEF_BLE_MTU_SIZE;
 

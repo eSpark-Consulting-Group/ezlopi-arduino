@@ -1,14 +1,14 @@
 #ifndef __EZLOPI_HOME_MODES_H__
 #define __EZLOPI_HOME_MODES_H__
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 #if defined(CONFIG_EZPI_SERV_ENABLE_MODES)
 typedef enum e_modes_ref_id_idx

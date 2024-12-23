@@ -1,19 +1,19 @@
 #include <time.h>
 #include <string.h>
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_util_version.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-version/ezlopi_util_version.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_cloud_registration.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-registration/ezlopi_cloud_registration.h"
 
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_service_loop.h"
-#include "ezlopi_service_webprov.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
 
 static cJSON* cj_reg_data = NULL;
 static const char* __reg_loop_str = "reg-loop";

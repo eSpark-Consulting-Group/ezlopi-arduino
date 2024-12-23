@@ -1,13 +1,13 @@
 #include <string.h>
 
-#include "lua/lua.h"
-#include "lua/lauxlib.h"
+#include "ezlopi-components/lua/lua.h"
+#include "ezlopi-components/lua/lauxlib.h"
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "core_updaters_api.h"
+#include "ezlopi-lua-modules/core/core_updaters_api.h"
 
 int lcore_update_item_value(lua_State *lua_state)
 {

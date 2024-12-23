@@ -3,10 +3,10 @@
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include <stdint.h>
 
-#include "ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
 
 l_fields_v2_t* ezlopi_scenes_populate_fields(cJSON* cj_fields);
 void ezlopi_scenes_populate_assign_field(l_fields_v2_t* new_field, cJSON* cj_field);

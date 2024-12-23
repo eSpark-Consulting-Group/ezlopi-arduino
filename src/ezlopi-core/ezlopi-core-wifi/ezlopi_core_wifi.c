@@ -16,27 +16,27 @@
 #include "esp_event.h"
 #include "esp_event_base.h"
 #include "esp_log.h"
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
 #include "lwip/err.h"
 #include "lwip/sys.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_wifi_err_reason.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_device_value_updated.h"
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_core_ping.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi_err_reason.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_value_updated.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-core/ezlopi-core-ping/ezlopi_core_ping.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_service_uart.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-services/ezlopi-service-uart/ezlopi_service_uart.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #define EXAMPLE_ESP_MAXIMUM_RETRY 5
 

@@ -10,7 +10,7 @@
 #include "gpiolib.h"
 #include "rtoslib.h"
 
-#include "ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 
 #define GPIO_PIN "5"
 

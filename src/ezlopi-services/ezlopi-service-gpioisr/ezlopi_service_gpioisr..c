@@ -1,18 +1,18 @@
 #include <string.h>
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/portmacro.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_device_value_updated.h"
-#include "ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_value_updated.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 
-#include "ezlopi_service_gpioisr.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-services/ezlopi-service-gpioisr/ezlopi_service_gpioisr.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static QueueHandle_t gpio_evt_queue = NULL;
 static const uint32_t default_debounce_time = 1000;

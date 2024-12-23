@@ -7,15 +7,15 @@
 #include "esp_err.h"
 #include "esp_check.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_info.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-info/ezlopi_core_info.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 
-#include "ezlopi_hal_uart.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-hal/ezlopi-hal-uart/ezlopi_hal_uart.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static void ezlopi_uart_channel_task(void* args);
 static ezlo_uart_channel_t get_available_channel();

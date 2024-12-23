@@ -6,16 +6,16 @@
 #include <freertos/task.h>
 #include <esp_websocket_client.h>
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_log.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_buffer.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_websocket_client.h"
+#include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-buffer/ezlopi_core_buffer.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-websocket_client/ezlopi_core_websocket_client.h"
 
-#include "ezlopi_service_loop.h"
-#include "ezlopi_service_otel.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-otel/ezlopi_service_otel.h"
 
 #define OTEL_SPAN_ID_LEN 16
 #define OTEL_TRACE_ID_LEN 32

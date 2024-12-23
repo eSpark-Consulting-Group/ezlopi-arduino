@@ -1,16 +1,16 @@
 #include <string.h>
 #include "esp_wifi.h"
 #include "esp_netif_types.h"
-#include "ezlopi_cloud_network.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_ethernet.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_util_trace.h"
+#include "ezlopi-cloud/ezlopi-cloud-network/ezlopi_cloud_network.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-ethernet/ezlopi_core_ethernet.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "cjext.h"
-#include "ezlopi_cloud_methods_str.h"
-#include "ezlopi_cloud_keywords.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_methods_str.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_keywords.h"
 
 #define MAC_ADDR_EXPANDED(mac) mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]
 

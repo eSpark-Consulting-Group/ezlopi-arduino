@@ -1,8 +1,8 @@
 #ifndef _EZLOPI_CORE_DEVICES_LIST_H_
 #define _EZLOPI_CORE_DEVICES_LIST_H_
 
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 typedef ezlopi_error_t (*f_sensor_call_v3_t)(e_ezlopi_actions_t action, l_ezlopi_item_t *item, void *arg, void *user_arg);
 

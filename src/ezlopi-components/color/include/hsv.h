@@ -37,7 +37,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include <lib8tion.h>
+#include "ezlopi-components/lib8tion/include/lib8tion.h"
 
 #ifdef __cplusplus
 extern "C" {

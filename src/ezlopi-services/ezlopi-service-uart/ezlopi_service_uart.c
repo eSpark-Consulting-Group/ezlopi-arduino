@@ -1,8 +1,8 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #include "freertos/FreeRTOSConfig.h"
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include "esp_log.h"
 #include "nvs_flash.h"
 #include "esp_netif.h"
@@ -16,39 +16,39 @@
 #include "tusb_cdc_acm.h"
 #endif // NOT defined CONFIG_IDF_TARGET_ESP32 or CONFIG_IDF_TARGET_ESP32C3
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_util_version.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-version/ezlopi_util_version.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_net.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_info.h"
-#include "ezlopi_core_reset.h"
-#include "ezlopi_core_buffer.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-net/ezlopi_core_net.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-info/ezlopi_core_info.h"
+#include "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h"
+#include "ezlopi-core/ezlopi-core-buffer/ezlopi_core_buffer.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
 
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_sntp.h"
-#include "ezlopi_core_info.h"
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_ping.h"
-#include "ezlopi_core_log.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-info/ezlopi_core_info.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-ping/ezlopi_core_ping.h"
+#include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_hal_uart.h"
-#include "ezlopi_hal_system_info.h"
+#include "ezlopi-hal/ezlopi-hal-uart/ezlopi_hal_uart.h"
+#include "ezlopi-hal/ezlopi-hal-sysinfo/ezlopi_hal_system_info.h"
 
-#include "ezlopi_cloud_info.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-info/ezlopi_cloud_info.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_service_ble.h"
-#include "ezlopi_service_uart.h"
-#include "ezlopi_service_loop.h"
-#include "ezlopi_service_webprov.h"
+#include "ezlopi-services/ezlopi-service-ble/ezlopi_service_ble.h"
+#include "ezlopi-services/ezlopi-service-uart/ezlopi_service_uart.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #if defined(CONFIG_IDF_TARGET_ESP32)
 #define TXD_PIN (GPIO_NUM_1)

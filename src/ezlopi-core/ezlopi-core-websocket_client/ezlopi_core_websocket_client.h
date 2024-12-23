@@ -10,10 +10,10 @@
 #include "nvs_flash.h"
 #include "esp_event.h"
 #include "esp_log.h"
-#include "../../build/config/sdkconfig.h"
-#include "cjext.h"
+#include <sdkconfig.h>
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 #include "esp_websocket_client.h"
 

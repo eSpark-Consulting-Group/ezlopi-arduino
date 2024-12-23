@@ -1,7 +1,7 @@
 #ifndef __CORE_GETTERS_API_H__
 #define __CORE_GETTERS_API_H__
 
-#include "lua/lua.h"
+#include "ezlopi-components/lua/lua.h"
 
 int lcore_get_product_name(lua_State *lua_state);
 int lcore_get_gateways(lua_State *lua_state);

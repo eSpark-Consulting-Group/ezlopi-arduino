@@ -1,4 +1,4 @@
-#include "core_others_api.h"
+#include "ezlopi-lua-modules/core/core_others_api.h"
 
 int lcore_notify_process_started(lua_State *lua_state) { return 0; }
 int lcore_notify_process_stopped(lua_State *lua_state) { return 0; }

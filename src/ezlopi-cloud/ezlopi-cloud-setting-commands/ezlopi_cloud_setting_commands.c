@@ -1,11 +1,11 @@
 
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_setting_commands.h"
+#include "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_cloud_setting_commands.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-setting-commands/ezlopi_cloud_setting_commands.h"
 
 void setting_value_set(cJSON *cj_request, cJSON *cj_response)
 {

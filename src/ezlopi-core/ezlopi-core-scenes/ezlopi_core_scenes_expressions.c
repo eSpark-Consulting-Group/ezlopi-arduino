@@ -1,25 +1,25 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "cjext.h"
-// #include "lua/lua.h"
-#include "lua/lualib.h"
-#include "lua/lauxlib.h"
+#include "ezlopi-components/cjext/cjext.h"
+// #include "ezlopi-components/lua/lua.h"
+#include "ezlopi-components/lua/lualib.h"
+#include "ezlopi-components/lua/lauxlib.h"
 
-#include "core_getters_api.h"
-#include "lua_helper_functions.h"
+#include "ezlopi-lua-modules/core/core_getters_api.h"
+#include "ezlopi-lua-modules/helper_functions/lua_helper_functions.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_scenes_value.h"
-#include "ezlopi_core_scenes_expressions.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_value.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_expressions.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static s_ezlopi_expressions_t *l_expressions_head = NULL;
 

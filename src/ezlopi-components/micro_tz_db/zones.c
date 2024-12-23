@@ -1,4 +1,4 @@
-#include "zones.h"
+#include "ezlopi-components/micro_tz_db/zones.h"
 #include <stdio.h>
 
 static const micro_tz_db_pair micro_tz_db_tzs[] = {

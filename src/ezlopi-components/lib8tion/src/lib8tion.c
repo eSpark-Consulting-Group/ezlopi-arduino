@@ -21,6 +21,6 @@
  * SOFTWARE.
  */
 
-#include "lib8tion.h"
+#include "ezlopi-components/lib8tion/include/lib8tion.h"
 
 uint16_t rand16seed;

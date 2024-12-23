@@ -6,12 +6,12 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_hal_adc.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-hal/ezlopi-hal-adc/ezlopi_hal_adc.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 typedef struct s_ezlopi_analog_object
 {

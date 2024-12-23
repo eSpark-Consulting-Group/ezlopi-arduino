@@ -1,7 +1,7 @@
 #ifndef __CORE_OTHERS_API_H__
 #define __CORE_OTHERS_API_H__
 
-#include "lua/lua.h"
+#include "ezlopi-components/lua/lua.h"
 
 int lcore_notify_process_started(lua_State *lua_state);
 int lcore_notify_process_stopped(lua_State *lua_state);

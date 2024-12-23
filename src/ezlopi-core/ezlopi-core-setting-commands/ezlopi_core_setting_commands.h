@@ -2,7 +2,7 @@
 #ifndef __EZLOPI_CORE_SETTING_COMMANDS_H__
 #define __EZLOPI_CORE_SETTING_COMMANDS_H__
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
 typedef enum
 {

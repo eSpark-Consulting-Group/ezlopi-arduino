@@ -1,7 +1,7 @@
 #ifndef __EZLOPI_SERVICE_OTEL_H__
 #define __EZLOPI_SERVICE_OTEL_H__
 
-#include "ezlopi_core_log.h"
+#include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
 
 typedef enum e_otel_type
 {

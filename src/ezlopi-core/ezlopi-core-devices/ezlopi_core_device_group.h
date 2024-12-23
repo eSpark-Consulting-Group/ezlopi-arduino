@@ -1,7 +1,7 @@
 #ifndef EZLOPI_CORE_DEVICES_GROUP_H
 #define EZLOPI_CORE_DEVICES_GROUP_H
 
-#include "ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
 
 typedef enum e_ezlopi_device_grp_entrydelay_type
 {

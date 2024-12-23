@@ -1,14 +1,14 @@
 #include <time.h>
 
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_devices_list.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi_cloud_items.h"
-#include "ezlopi_cloud_settings.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-items/ezlopi_cloud_items.h"
+#include "ezlopi-cloud/ezlopi-cloud-settings/ezlopi_cloud_settings.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_service_webprov.h"
+#include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
 
 /// static declarations
 static cJSON* __broadcast_message_items_updated_from_device(l_ezlopi_device_t* device, l_ezlopi_item_t* item);

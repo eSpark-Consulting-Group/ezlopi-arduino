@@ -6,12 +6,12 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <ctype.h>
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 
-#include "ezlopi_core_scenes_methods.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_methods.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 //------------ when-block: 'cj_function' -----------------------
 typedef struct s_when_function

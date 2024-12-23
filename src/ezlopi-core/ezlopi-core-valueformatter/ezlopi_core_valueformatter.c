@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_core_valueformatter.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-core/ezlopi-core-valueformatter/ezlopi_core_valueformatter.h"
 
 void ezlopi_valueformatter_bool_to_cjson(cJSON* cj_root, bool value, const char * scale)
 {

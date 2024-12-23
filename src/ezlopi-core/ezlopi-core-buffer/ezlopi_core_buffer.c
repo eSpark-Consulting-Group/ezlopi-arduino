@@ -2,9 +2,9 @@
 #include <freertos/task.h>
 #include <freertos/semphr.h>
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_buffer.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-buffer/ezlopi_core_buffer.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static char *__buffer = NULL;
 static uint32_t __buffer_len = 0;

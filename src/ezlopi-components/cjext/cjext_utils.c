@@ -51,7 +51,7 @@
 #endif
 
 #include "cjext_utils.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static unsigned char *cJSONUtils_strdup(const char *who, const unsigned char *const string)
 {

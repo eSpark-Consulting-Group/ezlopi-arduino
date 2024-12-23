@@ -6,7 +6,7 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
 #define EZLOPI_MINIMAL_STACK_SIZE (2048)
 

@@ -1,20 +1,20 @@
 #ifndef EZLOPI_CORE_DEVICES_H
 #define EZLOPI_CORE_DEVICES_H
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_cloud.h"
-#include "ezlopi_core_actions.h"
-#include "ezlopi_core_settings.h"
-#include "ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-cloud/ezlopi_core_cloud.h"
+#include "ezlopi-core/ezlopi-core-actions/ezlopi_core_actions.h"
+#include "ezlopi-core/ezlopi-core-settings/ezlopi_core_settings.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
 
-#include "ezlopi_hal_adc.h"
-#include "ezlopi_hal_pwm.h"
-#include "ezlopi_hal_uart.h"
-#include "ezlopi_hal_gpio.h"
-#include "ezlopi_hal_onewire.h"
-#include "ezlopi_hal_i2c_master.h"
-#include "ezlopi_hal_spi_master.h"
+#include "ezlopi-hal/ezlopi-hal-adc/ezlopi_hal_adc.h"
+#include "ezlopi-hal/ezlopi-hal-pwm/ezlopi_hal_pwm.h"
+#include "ezlopi-hal/ezlopi-hal-uart/ezlopi_hal_uart.h"
+#include "ezlopi-hal/ezlopi-hal-gpio/ezlopi_hal_gpio.h"
+#include "ezlopi-hal/ezlopi-hal-onewire/ezlopi_hal_onewire.h"
+#include "ezlopi-hal/ezlopi-hal-i2c/ezlopi_hal_i2c_master.h"
+#include "ezlopi-hal/ezlopi-hal-spi/ezlopi_hal_spi_master.h"
 
 typedef enum e_ezlopi_device_interface_type
 {

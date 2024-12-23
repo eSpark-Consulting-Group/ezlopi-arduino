@@ -11,9 +11,9 @@
 #include "esp_event.h"
 #include "esp_netif.h"
 
-#include "ezlopi_util_trace.h"
-#include "dns_hijacking.h"
-#include "ezlopi_core_factory_info.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-components/dns_hijacking/dns_hijacking.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
 #include "ezlopi_core_wifi_ap.h"
 
 static esp_netif_t* ezlopi_ap_netif = NULL;

@@ -3,9 +3,9 @@
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
 
 cJSON* ezlopi_scenes_cjson_create_then_block(l_action_block_v2_t* then_block);
 cJSON* ezlopi_scenes_cjson_create_when_block(l_when_block_v2_t* when_block);

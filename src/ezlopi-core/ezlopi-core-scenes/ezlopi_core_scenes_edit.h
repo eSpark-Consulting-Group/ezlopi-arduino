@@ -5,9 +5,9 @@
 
 #include "string.h"
 #include "stdint.h"
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 ezlopi_error_t ezlopi_core_scene_edit_store_updated_to_nvs(cJSON* cj_updated_scene);
 ezlopi_error_t ezlopi_core_scene_edit_update_id(uint32_t scene_id, cJSON* cj_updated_scene);

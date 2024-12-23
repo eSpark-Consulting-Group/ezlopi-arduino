@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <ctype.h>
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include <string.h>
 #include <stdint.h>
 

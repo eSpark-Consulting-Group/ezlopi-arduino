@@ -45,7 +45,7 @@
  */
 #include <assert.h>
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 /*******************************************************************************
  *                          Extern Data Declarations
  *******************************************************************************/

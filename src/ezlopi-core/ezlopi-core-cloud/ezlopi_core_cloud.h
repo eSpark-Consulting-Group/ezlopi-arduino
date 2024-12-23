@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
 typedef struct s_ezlopi_cloud_controller
 {

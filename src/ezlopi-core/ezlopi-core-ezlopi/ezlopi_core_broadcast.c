@@ -4,17 +4,17 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <freertos/semphr.h>
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_buffer.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-buffer/ezlopi_core_buffer.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 // static uint32_t __message_count = 0;
 static l_broadcast_method_t *__method_head = NULL;

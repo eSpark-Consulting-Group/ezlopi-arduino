@@ -1,5 +1,5 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_ENABLE_OTA
 
@@ -15,15 +15,15 @@
 #include "esp_https_ota.h"
 #include "esp_crt_bundle.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_ota.h"
-#include "ezlopi_core_reset.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-ota/ezlopi_core_ota.h"
+#include "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 
-#include "ezlopi_service_ota.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-services/ezlopi-service-ota/ezlopi_service_ota.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #define HASH_LEN 32
 

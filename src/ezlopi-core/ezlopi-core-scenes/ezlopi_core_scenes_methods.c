@@ -1,11 +1,11 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_scenes_v2.h"
-#include "ezlopi_core_scenes_methods.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_methods.h"
 
 static const char *ezlopi_scenes_methods_name[] = {
 #define EZLOPI_SCENE(method_type, name, func, category) name,

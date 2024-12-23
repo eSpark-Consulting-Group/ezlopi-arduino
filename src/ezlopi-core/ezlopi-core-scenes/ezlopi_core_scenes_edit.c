@@ -1,18 +1,18 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_scenes_v2.h"
-#include "ezlopi_core_scenes_edit.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_scenes_populate.h"
-#include "ezlopi_core_errors.h"
-#include "ezlopi_core_cloud.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_edit.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_populate.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-cloud/ezlopi_core_cloud.h"
 
-#include "ezlopi_service_meshbot.h"
+#include "ezlopi-services/ezlopi-service-meshbot/ezlopi_service_meshbot.h"
 
 static void _edit_scene(l_scenes_list_v2_t *scene_node, cJSON *cj_scene);
 

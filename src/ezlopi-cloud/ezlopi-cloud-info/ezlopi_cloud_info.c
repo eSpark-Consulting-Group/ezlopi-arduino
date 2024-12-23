@@ -4,20 +4,20 @@
 
 #include "freertos/FreeRTOS.h"
 
-#include "../../build/config/sdkconfig.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_cloud_info.h"
-#include "ezlopi_util_trace.h"
+#include <sdkconfig.h>
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-cloud/ezlopi-cloud-info/ezlopi_cloud_info.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_util_version.h"
+#include "ezlopi-util/ezlopi-util-version/ezlopi_util_version.h"
 
-#include "cjext.h"
-#include "ezlopi_cloud_methods_str.h"
-#include "ezlopi_cloud_keywords.h"
-#include "ezlopi_cloud_coordinates.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_sntp.h"
-#include "ezlopi_core_info.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_methods_str.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_keywords.h"
+#include "ezlopi-cloud/ezlopi-cloud-coordinates/ezlopi_cloud_coordinates.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-info/ezlopi_core_info.h"
 
 void info_get(cJSON* cj_request, cJSON* cj_response)
 {

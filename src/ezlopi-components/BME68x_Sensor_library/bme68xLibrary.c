@@ -36,7 +36,7 @@
  *
  */
 
-#include "bme68xLibrary.h"
+#include "ezlopi-components/BME68x_Sensor_library/bme68xLibrary.h"
 
 /* Maximum transaction size. Field size 17 x 3 */
 #define BME68X_MAX_READ_LENGTH 51

@@ -40,9 +40,9 @@
 #define BSEC2_H_
 
 /* dependent library header */
-#include "bme68xLibrary.h"
-#include "bsec_datatypes.h"
-#include "bsec_interface_multi.h"
+#include "ezlopi-components/BME68x_Sensor_library/bme68xLibrary.h"
+#include "ezlopi-components/Bosch_BSEC2/bsec_interface/bsec_datatypes.h"
+#include "ezlopi-components/Bosch_BSEC2/bsec_interface/bsec_interface_multi.h"
 
 #ifndef ARRAY_LEN
 #define ARRAY_LEN(array)				(sizeof(array)/sizeof(array[0]))

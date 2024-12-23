@@ -44,7 +44,7 @@
 
 #include "bme68x.h"
 #include <driver/i2c.h>
-#include "ezlopi_hal_i2c_master.h"
+#include "ezlopi-hal/ezlopi-hal-i2c/ezlopi_hal_i2c_master.h"
 
 #define BME68X_ERROR INT8_C(-1)
 #define BME68X_WARNING INT8_C(1)

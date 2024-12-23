@@ -3,9 +3,9 @@
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
-#include "ezlopi_core_scenes_expressions.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_expressions.h"
 
 void scenes_expressions_list(cJSON* cj_request, cJSON* cj_response);
 void scenes_expressions_set(cJSON* cj_request, cJSON* cj_response);

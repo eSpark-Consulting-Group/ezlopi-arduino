@@ -1,4 +1,4 @@
-#include "ezlopi_core_actions.h"
+#include "ezlopi-core/ezlopi-core-actions/ezlopi_core_actions.h"
 
 char *ezlopi_action_names[] = {
 #define EZLOPI_ACTION(action, name) name,

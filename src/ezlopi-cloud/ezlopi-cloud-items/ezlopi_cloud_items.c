@@ -1,21 +1,21 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 
-// #include "cjext.h"
-#include "ezlopi_util_trace.h"
+// #include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_room.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_devices_list.h"
+#include "ezlopi-core/ezlopi-core-room/ezlopi_core_room.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
 
-#include "ezlopi_cloud_items.h"
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_cloud_methods_str.h"
+#include "ezlopi-cloud/ezlopi-cloud-items/ezlopi_cloud_items.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_methods_str.h"
 
-#include "ezlopi_service_webprov.h"
+#include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
 
 static cJSON* ezlopi_device_create_item_table_from_prop(l_ezlopi_device_t* device_prop, l_ezlopi_item_t* item_properties)
 {

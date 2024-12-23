@@ -1,13 +1,13 @@
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include <stdlib.h>
 
-#include "ezlopi_cloud_scenes_scripts.h"
-#include "ezlopi_core_scenes_scripts.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-scenes/ezlopi_cloud_scenes_scripts.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_scripts.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
 void scenes_scripts_list(cJSON* cj_request, cJSON* cj_response)
 {

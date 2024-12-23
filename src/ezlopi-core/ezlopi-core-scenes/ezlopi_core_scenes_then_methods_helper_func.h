@@ -3,7 +3,7 @@
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "ezlopi_core_http.h"
+#include "ezlopi-core/ezlopi-core-http/ezlopi_core_http.h"
 
 typedef struct s_sendhttp_method
 {

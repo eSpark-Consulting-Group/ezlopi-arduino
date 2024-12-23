@@ -1,28 +1,28 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 
 #include <string.h>
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include "lwip/ip_addr.h"
 #include "esp_event_base.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_ping.h"
-#include "ezlopi_core_ble_gatt.h"
-#include "ezlopi_core_ble_buffer.h"
-#include "ezlopi_core_ble_profile.h"
-#include "ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-ping/ezlopi_core_ping.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_gatt.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_buffer.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_profile.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_service_ble_ble_auth.h"
-#include "ezlopi_service_ble.h"
+#include "ezlopi-services/ezlopi-service-ble/ezlopi_service_ble_ble_auth.h"
+#include "ezlopi-services/ezlopi-service-ble/ezlopi_service_ble.h"
 
 static s_linked_buffer_t* wifi_creds_linked_buffer = NULL;
 

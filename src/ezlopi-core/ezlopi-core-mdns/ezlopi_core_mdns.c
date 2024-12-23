@@ -1,5 +1,5 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_MDNS_EN
 
@@ -15,15 +15,15 @@
 #include "driver/gpio.h"
 #include "netdb.h"
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_cloud_keywords.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_keywords.h"
 
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_mdns.h"
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-mdns/ezlopi_core_mdns.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 static l_ezlopi_mdns_context_t *ezlopi_mdns_service_cntx = NULL;
 

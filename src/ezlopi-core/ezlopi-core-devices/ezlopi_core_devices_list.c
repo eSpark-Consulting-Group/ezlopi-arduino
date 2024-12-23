@@ -1,4 +1,4 @@
-#include "ezlopi_core_devices_list.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
 #include "ezlopi_core_device_macros.h"
 #include "ezlopi_core_devices_list_includes.h"
 

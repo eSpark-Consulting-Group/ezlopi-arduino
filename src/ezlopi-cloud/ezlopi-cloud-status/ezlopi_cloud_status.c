@@ -1,11 +1,11 @@
 
 #include "esp_system.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_cloud_constants.h"
-#include "ezlopi_cloud_status.h"
-#include "ezlopi_core_processes.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-status/ezlopi_cloud_status.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 
 
 void EZPI_CLOUD_status_get(cJSON* cj_request, cJSON* cj_response)

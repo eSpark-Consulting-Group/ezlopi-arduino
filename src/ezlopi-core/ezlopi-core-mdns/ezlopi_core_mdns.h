@@ -2,13 +2,13 @@
 #ifndef __EZLOPI_CORE_MDNS_H_
 #define __EZLOPI_CORE_MDNS_H_
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_SERV_MDNS_EN
 
 #include "mdns.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 #define EZPI_MDNS_HOSTNAME_SIZE  100
 #define EZPI_MDNS_CONTEX_COUNT 2

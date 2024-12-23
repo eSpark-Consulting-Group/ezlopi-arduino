@@ -1,19 +1,19 @@
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_modes.h"
-#include "ezlopi_core_modes_cjson.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_errors.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_api_methods.h"
-#include "ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-modes/ezlopi_core_modes.h"
+#include "ezlopi-core/ezlopi-core-modes/ezlopi_core_modes_cjson.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-api/ezlopi_core_api_methods.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
 
-#include "ezlopi_cloud_devices.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-devices/ezlopi_cloud_devices.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_service_modes.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-services/ezlopi-service-modes/ezlopi_service_modes.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #if defined(CONFIG_EZPI_SERV_ENABLE_MODES)
 

@@ -1,11 +1,11 @@
 #ifndef _EZLOPI_UTIL_H_
 #define _EZLOPI_UTIL_H_
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
-#include "EZLOPI_USER_CONFIG.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 #ifdef __cplusplus
 extern "C"

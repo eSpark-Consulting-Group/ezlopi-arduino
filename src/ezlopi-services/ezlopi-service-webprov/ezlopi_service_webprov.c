@@ -1,6 +1,6 @@
 
-#include "../../build/config/sdkconfig.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include <sdkconfig.h>
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #include <esp_mac.h>
 #include <esp_wifi_types.h>
@@ -10,25 +10,25 @@
 #include <freertos/semphr.h>
 #include <freertos/queue.h>
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_api.h"
+#include "ezlopi-core/ezlopi-core-api/ezlopi_core_api.h"
 
-#include "ezlopi_core_http.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_reset.h"
-#include "ezlopi_core_buffer.h"
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_api_methods.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_websocket_client.h"
+#include "ezlopi-core/ezlopi-core-http/ezlopi_core_http.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h"
+#include "ezlopi-core/ezlopi-core-buffer/ezlopi_core_buffer.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-api/ezlopi_core_api_methods.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-websocket_client/ezlopi_core_websocket_client.h"
 
-#include "ezlopi_service_otel.h"
-#include "ezlopi_service_webprov.h"
+#include "ezlopi-services/ezlopi-service-otel/ezlopi_service_otel.h"
+#include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
 
 #define TEST_PROV 0
 

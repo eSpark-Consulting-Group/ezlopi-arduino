@@ -13,8 +13,8 @@
 
 #warning "################### DO NOT USE printf ON PRODUCTION ###################"
 
-#include "ld2410_driver.h"
-#include "ezlopi_hal_uart.h"
+#include "ezlopi-components/ld2410_driver/ld2410_driver.h"
+#include "ezlopi-hal/ezlopi-hal-uart/ezlopi_hal_uart.h"
 
 s_ezlopi_uart_object_handle_t ezlo_ld2410_uart_handle = NULL;
 

@@ -3,7 +3,7 @@
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
 
 const char* ezlopi_scenes_status_to_string(e_scene_status_v2_t scene_status);
 int ezlopi_scenes_status_change_broadcast(l_scenes_list_v2_t* scene_node, const char* status_str);

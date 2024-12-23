@@ -3,16 +3,16 @@
 #include <time.h>
 #include <sys/time.h>
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #include "esp_sntp.h"
-#include "zones.h"
+#include "ezlopi-components/micro_tz_db/zones.h"
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_sntp.h"
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 static time_t start_time = 0;
 

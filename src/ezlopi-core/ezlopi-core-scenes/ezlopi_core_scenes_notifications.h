@@ -3,7 +3,7 @@
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
 // void ezlopi_scenes_notifications_add(cJSON *cj_notifications);
 void ezlopi_scenes_notifications_remove(cJSON* cj_notifications);

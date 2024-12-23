@@ -3,7 +3,7 @@
 
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
-#include "ezlopi_core_scenes_v2.h"
+#include "ezlopi-core/ezlopi-core-scenes/ezlopi_core_scenes_v2.h"
 
 int ezlopi_scene_then_set_item_value(l_scenes_list_v2_t* scene_node, void* arg);
 int ezlopi_scene_then_group_set_item_value(l_scenes_list_v2_t* curr_scene, void* arg);

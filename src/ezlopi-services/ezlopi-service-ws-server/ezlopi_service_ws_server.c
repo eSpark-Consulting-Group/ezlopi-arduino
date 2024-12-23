@@ -7,7 +7,7 @@
    CONDITIONS OF ANY KIND, either express or implied.
 */
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #if defined(CONFIG_ETH_USE_ESP32_EMAC)
 #include "esp_eth.h"
@@ -23,23 +23,23 @@
 #include "freertos/semphr.h"
 #include "esp_http_server.h"
 
-#include "cjext.h"
-#include "ezlopi_util_trace.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_api.h"
-#include "ezlopi_core_wifi.h"
-#include "ezlopi_core_buffer.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_event_group.h"
-#include "ezlopi_core_api_methods.h"
-#include "ezlopi_core_cjson_macros.h"
-#include "ezlopi_core_offline_login.h"
+#include "ezlopi-core/ezlopi-core-api/ezlopi_core_api.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-buffer/ezlopi_core_buffer.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
+#include "ezlopi-core/ezlopi-core-api/ezlopi_core_api_methods.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-offline-login/ezlopi_core_offline_login.h"
 
-#include "ezlopi_service_ws_server.h"
-#include "ezlopi_service_ws_server_clients.h"
+#include "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server.h"
+#include "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server_clients.h"
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 typedef struct s_async_resp_arg
 {

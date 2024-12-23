@@ -4,7 +4,7 @@
 #if 0
 #include <string.h>
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
 #ifdef __cplusplus
 extern "C"

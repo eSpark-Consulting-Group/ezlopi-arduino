@@ -38,7 +38,7 @@
 #include "esp32s3/rom/ets_sys.h"
 #endif
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #ifndef RMT_DEFAULT_CONFIG_TX
 #define RMT_DEFAULT_CONFIG_TX(gpio, channel_id)      \

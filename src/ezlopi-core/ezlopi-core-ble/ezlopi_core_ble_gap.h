@@ -1,12 +1,12 @@
 #ifndef _EZLOPI_CORE_BLE_GAP_H_
 #define _EZLOPI_CORE_BLE_GAP_H_
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 
 #include "esp_gap_ble_api.h"
-#include "ezlopi_core_ble_config.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_config.h"
 
 void ezlopi_ble_setup_adv_config(void);
 void ezlopi_ble_gap_set_passkey(uint32_t passkey);

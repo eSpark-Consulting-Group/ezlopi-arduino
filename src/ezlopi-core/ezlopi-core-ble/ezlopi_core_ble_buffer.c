@@ -1,12 +1,12 @@
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 
 #include <string.h>
 
-#include "ezlopi_core_ble_buffer.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_buffer.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 s_linked_buffer_t* ezlopi_ble_buffer_create(esp_ble_gatts_cb_param_t* param)
 {

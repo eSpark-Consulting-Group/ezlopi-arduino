@@ -1,21 +1,21 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_cloud_modes.h"
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-modes/ezlopi_cloud_modes.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "ezlopi_core_modes.h"
-#include "ezlopi_core_devices.h"
-#include "ezlopi_core_broadcast.h"
-#include "ezlopi_core_processes.h"
-#include "ezlopi_core_modes_cjson.h"
-#include "ezlopi_core_cjson_macros.h"
+#include "ezlopi-core/ezlopi-core-modes/ezlopi_core_modes.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-modes/ezlopi_core_modes_cjson.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_cjson_macros.h"
 
-#include "ezlopi_service_loop.h"
-#include "ezlopi_service_modes.h"
-// #include "ezlopi_service_webprov.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-modes/ezlopi_service_modes.h"
+// #include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
 
 #if defined(CONFIG_EZPI_SERV_ENABLE_MODES)
 

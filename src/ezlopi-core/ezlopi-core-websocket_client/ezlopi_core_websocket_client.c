@@ -11,13 +11,13 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
 
-#include "ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_factory_info.h"
-#include "ezlopi_core_websocket_client.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-websocket_client/ezlopi_core_websocket_client.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #define WSS_RX_BUFFER_SIZE 1024
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ld2410_driver.h"
+#include "ezlopi-components/ld2410_driver/ld2410_driver.h"
 #include "driver/gpio.h"
 
 #define TEST_SETTINGS 1

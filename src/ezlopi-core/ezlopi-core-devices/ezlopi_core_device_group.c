@@ -1,10 +1,10 @@
 
-#include "ezlopi_core_nvs.h"
-#include "ezlopi_core_device_group.h"
+#include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_group.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 //--------------------------------------------------------------------------------
 static l_ezlopi_device_grp_t *l_device_grp_head = NULL;

@@ -8,7 +8,7 @@
 #include "freertos/queue.h"
 #include "driver/uart.h"
 #include "esp_err.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 typedef int ezlo_uart_channel_t;
 

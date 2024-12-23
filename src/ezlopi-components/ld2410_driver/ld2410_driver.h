@@ -15,7 +15,7 @@
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "ezlopi_hal_uart.h"
+#include "ezlopi-hal/ezlopi-hal-uart/ezlopi_hal_uart.h"
 
 typedef unsigned char byte;
 #define delay(x) vTaskDelay(x / portTICK_RATE_MS)

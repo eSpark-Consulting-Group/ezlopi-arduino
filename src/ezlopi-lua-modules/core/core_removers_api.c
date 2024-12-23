@@ -1,4 +1,4 @@
-#include "core_removers_api.h"
+#include "ezlopi-lua-modules/core/core_removers_api.h"
 
 int lcore_remove_device(lua_State *lua_state) { return 0; }
 int lcore_remove_device_sync(lua_State *lua_state) { return 0; }

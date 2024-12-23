@@ -1,7 +1,7 @@
 #ifndef _EZLOPI_CORE_DEVICE_VALUE_UPDATED_H_
 #define _EZLOPI_CORE_DEVICE_VALUE_UPDATED_H_
-#include "ezlopi_core_devices_list.h"
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 ezlopi_error_t ezlopi_device_value_updated_from_device_broadcast(l_ezlopi_item_t* item);
 ezlopi_error_t ezlopi_device_value_updated_from_device_broadcast_by_item_id(uint32_t item_id);

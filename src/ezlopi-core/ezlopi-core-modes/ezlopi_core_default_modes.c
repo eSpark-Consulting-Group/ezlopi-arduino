@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "ezlopi_core_modes.h"
-#include "ezlopi_core_cloud.h"
-#include "ezlopi_core_devices.h"
+#include "ezlopi-core/ezlopi-core-modes/ezlopi_core_modes.h"
+#include "ezlopi-core/ezlopi-core-cloud/ezlopi_core_cloud.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices.h"
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
 #if defined(CONFIG_EZPI_SERV_ENABLE_MODES)
 

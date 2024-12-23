@@ -3,7 +3,7 @@
 
 #ifdef CONFIG_EZPI_ENABLE_OTA
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include "nvs_flash.h"
 
 #ifdef __cplusplus

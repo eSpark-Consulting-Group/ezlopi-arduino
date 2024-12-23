@@ -8,10 +8,10 @@ extern "C"
 
 #include <esp_partition.h>
 
-#include "cjext.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 #define EZLOPI_DEVICE_TYPE_TEST_DEVICE -1
 #define EZLOPI_DEVICE_TYPE_GENERIC 0

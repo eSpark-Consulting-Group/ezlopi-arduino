@@ -1,7 +1,7 @@
 #ifndef _EZLOPI_CORE_BLE_CONFIG_H_
 #define _EZLOPI_CORE_BLE_CONFIG_H_
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 

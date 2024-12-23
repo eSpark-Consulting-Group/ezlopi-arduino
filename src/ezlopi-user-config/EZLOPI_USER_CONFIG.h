@@ -2,8 +2,8 @@
 #define _EZLOPI_USER_CONFIG_H_
 
 #include "driver/uart.h"
-#include "ezlopi_core_heap.h"
-#include "../build/config/sdkconfig.h"
+#include "ezlopi-core/ezlopi-core-heap/ezlopi_core_heap.h"
+#include <sdkconfig.h>
 
 
 #if defined(CONFIG_EZPI_DISTRO_FULL_OPTION)

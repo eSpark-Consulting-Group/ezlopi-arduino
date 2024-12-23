@@ -5,7 +5,7 @@
 
 #include "driver/i2c.h"
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 typedef enum e_ezlopi_i2c_channel
 {

@@ -1,7 +1,7 @@
 #ifndef __CORE_REMOVERS_API_H__
 #define __CORE_REMOVERS_API_H__
 
-#include "lua/lua.h"
+#include "ezlopi-components/lua/lua.h"
 
 int lcore_remove_device(lua_State *lua_state);
 int lcore_remove_device_sync(lua_State *lua_state);

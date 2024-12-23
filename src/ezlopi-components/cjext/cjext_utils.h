@@ -28,8 +28,8 @@ extern "C"
 {
 #endif
 
-#include "cjext.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include "ezlopi-components/cjext/cjext.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
   /* Implement RFC6901 (https://tools.ietf.org/html/rfc6901) JSON Pointer spec. */
   cJSON * cJSONUtils_GetPointer(cJSON* const object, const char* pointer);

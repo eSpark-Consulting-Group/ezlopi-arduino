@@ -3,7 +3,7 @@
 
 #include <time.h>
 
-#include "ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
 ezlopi_error_t EZPI_CORE_sntp_init(void);
 ezlopi_error_t EZPI_CORE_sntp_set_location(const char* location);

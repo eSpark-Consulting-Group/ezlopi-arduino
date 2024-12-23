@@ -31,12 +31,12 @@
 #include "lwip/timeouts.h"
 #include "lwip/inet_chksum.h"
 
-#include "ezlopi_util_trace.h"
-#include "ezlopi_core_event_group.h"
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
 
 #include "ping_sock.h"
-#include "EZLOPI_USER_CONFIG.h"
-#include "ezlopi_service_loop.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
 
 #define PING_CHECK(a, str, goto_tag, ret_value, ...)                        \
     do                                                                      \
