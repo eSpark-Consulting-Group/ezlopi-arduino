@@ -16,6 +16,7 @@
 #include "esp_event.h"
 #include "esp_event_base.h"
 #include "esp_log.h"
+#include "tcpip_adapter_types.h"
 #include "ezlopi-components/cjext/cjext.h"
 
 #include "lwip/err.h"

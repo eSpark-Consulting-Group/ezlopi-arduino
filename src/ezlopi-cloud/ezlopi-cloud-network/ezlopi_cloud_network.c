@@ -1,4 +1,5 @@
 #include <string.h>
+#include <esp_mac.h>
 #include "esp_wifi.h"
 #include "esp_netif_types.h"
 #include "ezlopi-cloud/ezlopi-cloud-network/ezlopi_cloud_network.h"

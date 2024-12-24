@@ -1,6 +1,8 @@
 #include <time.h>
 #include <string.h>
 
+#include <esp_mac.h>
+
 #include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 #include "ezlopi-util/ezlopi-util-version/ezlopi_util_version.h"
 

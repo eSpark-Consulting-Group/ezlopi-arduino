@@ -39,7 +39,7 @@
 #include <esp_err.h>
 #include <driver/rmt.h>
 #include "ezlopi-components/color/include/color.h"
-#include <color_codes.h>
+#include "ezlopi-components/color/include/color_codes.h"
 
 #ifdef __cplusplus
 extern "C" {

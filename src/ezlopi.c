@@ -1,5 +1,7 @@
 #include <stdio.h>
-#include <cjext.h>
+
+#if 0 
+#include "ezlopi-components/cjext/cjext.h"
 
 #include <esp_system.h>
 #include <driver/adc.h>
@@ -12,7 +14,7 @@
 
 #include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi_core_ezlopi.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_ezlopi.h"
 #include "ezlopi-services/ezlopi-service-ota/ezlopi_service_ota.h"
 #include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
 #include "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h"
@@ -29,7 +31,7 @@
 #include "ezlopi-services/ezlopi-service-gpioisr/ezlopi_service_gpioisr.h"
 #include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
 #include "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server.h"
-#include "ezlopi_service_broadcast.h"
+#include "ezlopi-services/ezlopi-service-broadcast/ezlopi_service_broadcast.h"
 #include "ezlopi-services/ezlopi-service-led-indicator/ezlopi_service_led_indicator.h"
 #include "ezlopi-services/ezlopi-service-system-temperature-sensor/ezlopi_service_system_temperature_sensor.h"
 
@@ -192,3 +194,5 @@ static void __blinky(void *pv)
         vTaskDelay(10000 / portTICK_PERIOD_MS);
     }
 }
+
+#endif

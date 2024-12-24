@@ -8,9 +8,9 @@
 #include "ezlopi-services/ezlopi-service-led-indicator/ezlopi_service_led_indicator.h"
 
 #include "driver/rmt.h"
-#include "led_strip.h"
+#include "ezlopi-components/led_strip/include/led_strip.h"
 #include "esp_err.h"
-#include "color_codes.h"
+#include "ezlopi-components/color/include/color_codes.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/gpio.h"

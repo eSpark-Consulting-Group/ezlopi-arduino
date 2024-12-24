@@ -1,6 +1,8 @@
 #include <string.h>
 
 #include "freertos/FreeRTOSConfig.h"
+#include "esp_mac.h"
+#include "esp_chip_info.h"
 #include "esp_netif_ip_addr.h"
 #include "ezlopi-core/ezlopi-core-info/ezlopi_core_info.h"
 

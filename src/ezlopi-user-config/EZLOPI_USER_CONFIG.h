@@ -3,6 +3,7 @@
 
 #include "driver/uart.h"
 #include "ezlopi-core/ezlopi-core-heap/ezlopi_core_heap.h"
+#include "ezlopi_sdkconfig_missing.h"
 #include <sdkconfig.h>
 
 

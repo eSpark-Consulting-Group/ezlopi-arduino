@@ -18,6 +18,7 @@
 #include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
 #include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
 #include "ezlopi-core/ezlopi-core-info/ezlopi_core_info.h"
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 void info_get(cJSON* cj_request, cJSON* cj_response)
 {

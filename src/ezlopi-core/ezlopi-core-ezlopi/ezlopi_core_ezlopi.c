@@ -14,7 +14,7 @@
 #include "ezlopi-core/ezlopi-core-room/ezlopi_core_room.h"
 #include "ezlopi-core/ezlopi-core-modes/ezlopi_core_modes.h"
 #include "ezlopi-core/ezlopi-core-buffer/ezlopi_core_buffer.h"
-#include "ezlopi_core_event_queue.h"
+#include "ezlopi-core/ezlopi-core-event-queue/ezlopi_core_event_queue.h"
 #include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"
 #include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
 #include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_group.h"

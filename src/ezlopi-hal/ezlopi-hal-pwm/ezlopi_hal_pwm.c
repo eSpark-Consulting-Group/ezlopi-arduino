@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "ezlopi-hal/ezlopi-hal-pwm/"
+#include "ezlopi-hal/ezlopi-hal-pwm/ezlopi_hal_pwm.h"
 #include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 #include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 

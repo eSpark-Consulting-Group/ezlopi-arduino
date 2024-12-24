@@ -4,6 +4,7 @@
 #include "driver/uart.h"
 #include "esp_netif.h"
 #include "esp_system.h"
+#include "esp_wifi.h"
 #include "driver/gpio.h"
 #include "esp_idf_version.h"
 #include "ezlopi-util/ezlopi-util-version/ezlopi_util_version.h"

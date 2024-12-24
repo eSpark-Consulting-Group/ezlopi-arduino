@@ -13,7 +13,7 @@
 
 #include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
 #include "ezlopi-services/ezlopi-service-otel/ezlopi_service_otel.h"
-#include "ezlopi_service_broadcast.h"
+#include "ezlopi-services/ezlopi-service-broadcast/ezlopi_service_broadcast.h"
 
 static QueueHandle_t __broadcast_queue = NULL;
 

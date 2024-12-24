@@ -10,9 +10,9 @@
 #include "freertos/task.h"
 
 #include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
-#include "ezlopi-components/lua/lua.h"
+#include "ezlopi-components/lua/lua/lua.h"
 #include "ezlopi-components/lua/lualib.h"
-#include "ezlopi-components/lua/lauxlib.h"
+#include "ezlopi-components/lua/lua/lauxlib.h"
 
 #include "ezlopi-lua-modules/core/corelib.h"
 #include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"

@@ -15,7 +15,7 @@
 
 #include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "esp_websocket_client.h"
+#include <esp_websocket_client.h>
 
 
 // ezlopi_error_t ezlopi_websocket_client_send(esp_websocket_client_handle_t client, char *data, uint32_t len);

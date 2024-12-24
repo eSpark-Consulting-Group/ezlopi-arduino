@@ -4,9 +4,9 @@
 #ifdef CONFIG_EZPI_SERV_ENABLE_MESHBOTS
 
 #include "ezlopi-components/cjext/cjext.h"
-// #include "ezlopi-components/lua/lua.h"
+// #include "ezlopi-components/lua/lua/lua.h"
 #include "ezlopi-components/lua/lualib.h"
-#include "ezlopi-components/lua/lauxlib.h"
+#include "ezlopi-components/lua/lua/lauxlib.h"
 
 #include "ezlopi-lua-modules/core/core_getters_api.h"
 #include "ezlopi-lua-modules/helper_functions/lua_helper_functions.h"

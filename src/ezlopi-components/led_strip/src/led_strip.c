@@ -30,7 +30,7 @@
   *
   * MIT Licensed as described in the file LICENSE
   */
-#include "led_strip.h"
+#include "ezlopi-components/led_strip/include/led_strip.h"
 #include <esp_log.h>
 #include <esp_attr.h>
 #include <stdlib.h>
