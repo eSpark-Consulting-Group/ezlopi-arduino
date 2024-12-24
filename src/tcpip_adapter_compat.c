@@ -7,7 +7,8 @@
 #include "esp_netif.h"
 #include "esp_private/wifi.h"
 #include "esp_log.h"
-#include "esp_netif_net_stack.h"
+#include "esp_netif_net_stack.h" 
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #if CONFIG_ESP_NETIF_TCPIP_ADAPTER_COMPATIBLE_LAYER
 

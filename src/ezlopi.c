@@ -1,27 +1,81 @@
+/**
+ * @file    ezlopi.c
+ * @brief   perform some function on data
+ * @author  Abeer Ul Haq
+ * @version 0.1
+ * @date    1st January 2024
+ */
+/* ===========================================================================
+** Copyright (C) 2024 Ezlo Innovation Inc
+**
+** Under EZLO AVAILABLE SOURCE LICENSE (EASL) AGREEMENT
+**
+** Redistribution and use in source and binary forms, with or without
+** modification, are permitted provided that the following conditions are met:
+**
+** 1. Redistributions of source code must retain the above copyright notice,
+**    this list of conditions and the following disclaimer.
+** 2. Redistributions in binary form must reproduce the above copyright
+**    notice, this list of conditions and the following disclaimer in the
+**    documentation and/or other materials provided with the distribution.
+** 3. Neither the name of the copyright holder nor the names of its
+**    contributors may be used to endorse or promote products derived from
+**    this software without specific prior written permission.
+**
+** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+** AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+** IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+** ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+** LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+** CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+** SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+** INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+** CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+** ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+** POSSIBILITY OF SUCH DAMAGE.
+** ===========================================================================
+*/
+
+/*******************************************************************************
+ *                          Include Files
+ *******************************************************************************/
+/**
+ * Include Sequence
+ * 1. C standard libraries eg. stdint, string etc.
+ * 2. Third party component eg. cJSON, freeRTOS etc etc
+ * 3. ESP-IDF specific eg. driver/gpio, esp_log etc.
+ * 4. EzloPi HAL specific eg ezlopi_hal_i2c
+ * 5. EzloPi core specific eg. ezlopi_core_ble
+ * 6. EzloPi cloud specific eg. ezlopi_cloud_items
+ * 7. EzloPi Service specific eg ezlopi_service_ble
+ * 8. EzloPi Sensors and Device Specific eg. ezlopi_device_0001_digitalout_generic
+ */
 #include <stdio.h>
 
-#if 0 
-#include "ezlopi-components/cjext/cjext.h"
+// #include <freertos/task.h>
+// #include <freertos/FreeRTOS.h>
+// #include "ezlopi-components/pt/pt.h"
+// #include "ezlopi-components/cjext/cjext.h"
 
-#include <esp_system.h>
-#include <driver/adc.h>
-#include <driver/i2c.h>
-#include <driver/gpio.h>
-#include <mbedtls/config.h>
-#include <freertos/FreeRTOS.h>
-#include <freertos/task.h>
-#include <esp_heap_caps.h>
+#include <esp_mac.h>
+// #include <esp_system.h>
+// #include <driver/adc.h>
+// #include <driver/i2c.h>
+// #include <driver/gpio.h>
+// #include <esp_heap_caps.h>
 
 #include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
-#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_ezlopi.h"
-#include "ezlopi-services/ezlopi-service-ota/ezlopi_service_ota.h"
 #include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
-#include "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h"
-#include "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h"
 #include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_ezlopi.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_config.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
 #include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h"
 
+#include "ezlopi-services/ezlopi-service-ota/ezlopi_service_ota.h"
 #include "ezlopi-services/ezlopi-service-ble/ezlopi_service_ble.h"
 #include "ezlopi-services/ezlopi-service-otel/ezlopi_service_otel.h"
 #include "ezlopi-services/ezlopi-service-uart/ezlopi_service_uart.h"
@@ -35,22 +89,39 @@
 #include "ezlopi-services/ezlopi-service-led-indicator/ezlopi_service_led_indicator.h"
 #include "ezlopi-services/ezlopi-service-system-temperature-sensor/ezlopi_service_system_temperature_sensor.h"
 
-#include "ezlopi-components/pt/pt.h"
-#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
-#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_config.h"
-
 #include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
+/*******************************************************************************
+ *                          Extern Data Declarations
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                          Extern Function Declarations
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                          Type & Macro Definitions
+ *******************************************************************************/
+
+/*******************************************************************************
+ *                          Static Function Prototypes
+ *******************************************************************************/
+
+static void __print_mac_address(void);
 static void __blinky(void *pv);
 
-static void __print_mac_address(void)
-{
-    uint8_t __base_mac[6] = {0, 0, 0, 0, 0, 0};
+/*******************************************************************************
+ *                          Static Data Definitions
+ *******************************************************************************/
 
-    esp_read_mac(__base_mac, ESP_MAC_WIFI_STA);
-}
+/*******************************************************************************
+ *                          Extern Data Definitions
+ *******************************************************************************/
 
-void app_main(void)
+/*******************************************************************************
+ *                          Extern Function Definitions
+ *******************************************************************************/
+void ezlopi_arduino_init(void)
 {
 
 #ifdef CONFIG_EZPI_UTIL_TRACE_EN
@@ -120,6 +191,17 @@ void app_main(void)
 #ifdef CONFIG_EZPI_ENABLE_OTA
     ezlopi_service_ota_init();
 #endif // CONFIG_EZPI_ENABLE_OTA
+}
+
+/*******************************************************************************
+ *                         Static Function Definitions
+ *******************************************************************************/
+
+static void __print_mac_address(void)
+{
+    uint8_t __base_mac[6] = {0, 0, 0, 0, 0, 0};
+
+    esp_read_mac(__base_mac, ESP_MAC_WIFI_STA);
 }
 
 static void __blinky(void *pv)
@@ -195,4 +277,6 @@ static void __blinky(void *pv)
     }
 }
 
-#endif
+/*******************************************************************************
+ *                          End of File
+ *******************************************************************************/

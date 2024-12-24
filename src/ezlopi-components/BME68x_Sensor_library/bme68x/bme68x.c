@@ -36,7 +36,7 @@
 *
 */
 
-#include "bme68x.h"
+#include "ezlopi-components/BME68x_Sensor_library/bme68x/bme68x.h"
 #include <stdio.h>
 
 /* This internal API is used to read the calibration coefficients */

@@ -1,5 +1,6 @@
 
 #include <sdkconfig.h>
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 
@@ -7,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <esp_mac.h>
 #include "esp_system.h"
 #include "esp_log.h"
 #include "ezlopi-components/cjext/cjext.h"

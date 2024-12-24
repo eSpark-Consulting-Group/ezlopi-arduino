@@ -42,7 +42,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "bme68x.h"
+#include "ezlopi-components/BME68x_Sensor_library/bme68x/bme68x.h"
 #include <driver/i2c.h>
 #include "ezlopi-hal/ezlopi-hal-i2c/ezlopi_hal_i2c_master.h"
 

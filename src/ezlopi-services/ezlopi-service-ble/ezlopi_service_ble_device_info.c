@@ -1,5 +1,6 @@
 
 #include <sdkconfig.h>
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 
@@ -263,7 +264,7 @@ static void EZPI_SERVICE_BLE_chip_info(esp_gatt_value_t *value, esp_ble_gatts_cb
             esp_chip_info_t chip_info;
             char chip_revision[10];
             esp_chip_info(&chip_info);
-            sprintf(chip_revision, "%.2f", (float)(chip_info.full_revision / 100.0));
+            sprintf(chip_revision, "%.2f", (float)(chip_info.revision / 100.0));
             cJSON_AddStringToObject(__FUNCTION__, cj_chip, "type", EZPI_CORE_info_get_chip_type_to_name(chip_info.model));
             cJSON_AddStringToObject(__FUNCTION__, cj_chip, "version", chip_revision);
             ble_device_info_send_data(cj_chip, value, param);
