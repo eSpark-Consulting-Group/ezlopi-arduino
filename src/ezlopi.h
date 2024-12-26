@@ -54,6 +54,32 @@
  * 8. EzloPi Sensors and Device Specific eg. ezlopi_device_0001_digitalout_generic
  */
 #include <Arduino.h>
+#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+
+#include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
+#include "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h"
+#include "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h"
+#include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_ezlopi.h"
+#include "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_config.h"
+#include "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h"
+#include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
+#include "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h"
+
+#include "ezlopi-services/ezlopi-service-ota/ezlopi_service_ota.h"
+#include "ezlopi-services/ezlopi-service-ble/ezlopi_service_ble.h"
+#include "ezlopi-services/ezlopi-service-otel/ezlopi_service_otel.h"
+#include "ezlopi-services/ezlopi-service-uart/ezlopi_service_uart.h"
+#include "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h"
+#include "ezlopi-services/ezlopi-service-modes/ezlopi_service_modes.h"
+#include "ezlopi-services/ezlopi-service-meshbot/ezlopi_service_meshbot.h"
+#include "ezlopi-services/ezlopi-service-gpioisr/ezlopi_service_gpioisr.h"
+#include "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h"
+#include "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server.h"
+#include "ezlopi-services/ezlopi-service-broadcast/ezlopi_service_broadcast.h"
+#include "ezlopi-services/ezlopi-service-led-indicator/ezlopi_service_led_indicator.h"
+#include "ezlopi-services/ezlopi-service-system-temperature-sensor/ezlopi_service_system_temperature_sensor.h"
+
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 /*******************************************************************************
  *                          C++ Declaration Wrapper
@@ -75,7 +101,7 @@ extern "C"
      *                          Extern Function Prototypes
      *******************************************************************************/
 
-    void ezlopi_arduino_init(void);
+    // void ezlopi_arduino_init(void);
 
 #ifdef __cplusplus
 }

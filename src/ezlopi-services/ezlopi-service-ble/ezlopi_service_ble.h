@@ -2,6 +2,14 @@
 #ifndef _EZLOPI_SERVICE_BLE_H_
 #define _EZLOPI_SERVICE_BLE_H_
 
+/*******************************************************************************
+ *                          C++ Declaration Wrapper
+ *******************************************************************************/
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #ifdef CONFIG_EZPI_BLE_ENABLE
 
 #define CHECK_PRINT_ERROR(x, msg)                                    \
@@ -53,5 +61,10 @@ void ezlopi_ble_service_init(void);
 int ezlopi_ble_service_get_ble_mac(uint8_t mac[6]);
 
 #endif // CONFIG_EZPI_BLE_ENABLE
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif //  _EZLOPI_SERVICE_BLE_H_

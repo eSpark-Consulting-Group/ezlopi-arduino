@@ -1,6 +1,7 @@
 
 
 #include <sdkconfig.h>
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #ifdef CONFIG_EZPI_ENABLE_LED_INDICATOR
 

@@ -4,6 +4,14 @@
 
 #include "ezlopi-components/cjext/cjext.h"
 
+/*******************************************************************************
+ *                          C++ Declaration Wrapper
+ *******************************************************************************/
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 typedef enum
 {
     SETTING_COMMAND_NAME_SCALE_TEMPERATURE = 0,
@@ -48,5 +56,10 @@ int ezlopi_core_setting_updated_broadcast(cJSON *cj_params, cJSON *cj_result);
 const char *ezlopi_core_setting_get_temperature_scale_str();
 const char *ezlopi_core_setting_get_date_format_str();
 const char *ezlopi_core_setting_get_time_format_str();
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /// __EZLOPI_CORE_SETTING_COMMANDS_H__

@@ -4,6 +4,14 @@
 #include "ezlopi-components/cjext/cjext.h"
 #include "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server_clients.h"
 
+/*******************************************************************************
+ *                          C++ Declaration Wrapper
+ *******************************************************************************/
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 typedef enum e_ws_status
 {
     WS_STATUS_RUNNING = 0,
@@ -16,5 +24,9 @@ void ezlopi_service_ws_server_start(void);
 
 e_ws_status_t ezlopi_service_ws_server_status(void);
 void ezlpi_service_ws_server_dummy(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __EZLOPI_SERVICE_WS_SERVER_H__

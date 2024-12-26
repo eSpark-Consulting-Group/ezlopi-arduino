@@ -3,6 +3,14 @@
 
 #include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
 
+/*******************************************************************************
+ *                          C++ Declaration Wrapper
+ *******************************************************************************/
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 typedef void (*f_interrupt_upcall_t)(void *);
 
 void ezlopi_service_gpioisr_init(void);
@@ -10,6 +18,10 @@ void ezlopi_service_gpioisr_register_v3(l_ezlopi_item_t *item, f_interrupt_upcal
 
 #if 0 // v2.x
 void gpio_isr_service_register(s_ezlopi_device_properties_t *properties, f_interrupt_upcall_t __upcall, TickType_t debounce_ms);
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif // _EZLOPI_SERVICE_GPIOISR_H_

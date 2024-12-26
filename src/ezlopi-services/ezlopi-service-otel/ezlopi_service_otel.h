@@ -3,6 +3,14 @@
 
 #include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
 
+/*******************************************************************************
+ *                          C++ Declaration Wrapper
+ *******************************************************************************/
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 typedef enum e_otel_type
 {
     E_OTEL_NONE = 0,
@@ -14,5 +22,9 @@ typedef enum e_otel_type
 
 void ezlopi_service_otel_init(void);
 int ezlopi_service_otel_add_trace_to_telemetry_queue(cJSON *cj_trace);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __EZLOPI_SERVICE_OTEL_H__
