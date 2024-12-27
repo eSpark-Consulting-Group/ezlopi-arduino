@@ -1,6 +1,8 @@
 #ifndef _EZLOPI_SERVICE_BLE_BLE_AUT_H_
 #define _EZLOPI_SERVICE_BLE_BLE_AUT_H_
 
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
+
 #ifdef CONFIG_EZPI_BLE_ENABLE
 typedef enum e_auth_status
 {

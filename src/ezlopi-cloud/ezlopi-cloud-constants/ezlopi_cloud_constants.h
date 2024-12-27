@@ -11,9 +11,9 @@
                       : COMPARE_IF_EQUAL(STR1, STR2 , STR1_LEN , STR2_LEN))
 //-------------------------------------------------------------------------------------------------------------
 
-#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_keywords.h"
+#include "ezlopi_cloud_keywords.h"
 #include "ezlopi_cloud_scales_str.h"
-#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_methods_str.h"
+#include "ezlopi_cloud_methods_str.h"
 #include "ezlopi_cloud_devices_str.h"
 #include "ezlopi_cloud_category_str.h"
 #include "ezlopi_cloud_item_name_str.h"

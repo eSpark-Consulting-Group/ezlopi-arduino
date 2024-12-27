@@ -1,5 +1,5 @@
 #include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
-#include "ezlopi_core_device_macros.h"
+#include "ezlopi-core/ezlopi-core-devices/ezlopi_core_device_macros.h"
 #include "ezlopi_core_devices_list_includes.h"
 
 static s_ezlopi_device_v3_t gc_device_array_v3[] = {

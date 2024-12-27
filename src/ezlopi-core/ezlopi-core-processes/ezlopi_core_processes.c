@@ -3,6 +3,7 @@
 #include "stdbool.h"
 #include "string.h"
 #include <sdkconfig.h>
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 

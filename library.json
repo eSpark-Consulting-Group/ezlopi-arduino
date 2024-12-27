@@ -23,30 +23,8 @@
     "platforms": "*",
     "build": {
         "includeDir": "ezlopi-util/ezlopi-util-trace",
-        "include": [
-        "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h",
-        "ezlopi-core/ezlopi-core-wifi/ezlopi_core_wifi.h",
-        "ezlopi-core/ezlopi-core-reset/ezlopi_core_reset.h",
-        "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_ezlopi.h",
-        "ezlopi-core/ezlopi-core-ble/ezlopi_core_ble_config.h",
-        "ezlopi-core/ezlopi-core-processes/ezlopi_core_processes.h",
-        "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h",
-        "ezlopi-core/ezlopi-core-setting-commands/ezlopi_core_setting_commands.h",
-        "ezlopi-services/ezlopi-service-ota/ezlopi_service_ota.h",
-        "ezlopi-services/ezlopi-service-ble/ezlopi_service_ble.h",
-        "ezlopi-services/ezlopi-service-otel/ezlopi_service_otel.h",
-        "ezlopi-services/ezlopi-service-uart/ezlopi_service_uart.h",
-        "ezlopi-services/ezlopi-service-loop/ezlopi_service_loop.h",
-        "ezlopi-services/ezlopi-service-modes/ezlopi_service_modes.h",
-        "ezlopi-services/ezlopi-service-meshbot/ezlopi_service_meshbot.h",
-        "ezlopi-services/ezlopi-service-gpioisr/ezlopi_service_gpioisr.h",
-        "ezlopi-services/ezlopi-service-webprov/ezlopi_service_webprov.h",
-        "ezlopi-services/ezlopi-service-ws-server/ezlopi_service_ws_server.h",
-        "ezlopi-services/ezlopi-service-broadcast/ezlopi_service_broadcast.h",
-        "ezlopi-services/ezlopi-service-led-indicator/ezlopi_service_led_indicator.h",
-        "ezlopi-services/ezlopi-service-system-temperature-sensor/ezlopi_service_system_temperature_sensor.h"
-      ],
-      "libArchive": false
+        "extraScript": "extra_script.py",
+        "libArchive": false
     }
   }
   

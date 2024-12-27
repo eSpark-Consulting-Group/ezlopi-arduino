@@ -2,6 +2,7 @@
 #define _EZLOPI_CORE_BLE_CONFIG_H_
 
 #include <sdkconfig.h>
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
 

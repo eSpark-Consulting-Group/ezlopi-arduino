@@ -160,7 +160,7 @@ static void ezlopi_ble_basic_init(void)
     }
 
     // dump("ble_device_name", ble_device_name, 0, sizeof(ble_device_name));
-
+    ESP_LOGE("", "---------------- Ash %d", esp_bt_controller_get_status());
     static esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT));
     CHECK_PRINT_ERROR(esp_bt_controller_init(&bt_cfg), "initialize controller failed");

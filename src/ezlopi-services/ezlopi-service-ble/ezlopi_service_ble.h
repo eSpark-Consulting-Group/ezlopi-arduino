@@ -2,6 +2,8 @@
 #ifndef _EZLOPI_SERVICE_BLE_H_
 #define _EZLOPI_SERVICE_BLE_H_
 
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
+
 /*******************************************************************************
  *                          C++ Declaration Wrapper
  *******************************************************************************/
