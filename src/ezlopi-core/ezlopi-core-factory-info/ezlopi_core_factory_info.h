@@ -179,16 +179,6 @@ static const char *ezlopi_config_test =
     \"cmd\":3,\
     \"dev_detail\":[\
         {\
-        \"dev_type\":5,\
-        \"dev_name\":\"Dimmer_riken\",\
-        \"id_room\":\"\",\
-        \"id_item\":22,\
-        \"gpio\":18,\
-        \"pwm_resln\":3,\
-        \"freq_hz\":50,\
-        \"duty_cycle\":0\
-        },\
-        {\
             \"dev_type\":1,\
             \"dev_name\":\"switch_temp_riken\",\
             \"id_room\":\"\",\
@@ -202,28 +192,6 @@ static const char *ezlopi_config_test =
             \"op_inv\":false,\
             \"val_ip\":false,\
             \"val_op\":false\
-        },\
-        {\
-            \"dev_type\":1,\
-            \"dev_name\":\"Bulb_riken\",\
-            \"id_room\":\"\",\
-            \"id_item\":1,\
-            \"gpio_in\":\"\",\
-            \"gpio_out\":22,\
-            \"pullup_ip\":false,\
-            \"pullup_op\":false,\
-            \"is_ip\":false,\
-            \"ip_inv\":false,\
-            \"op_inv\":false,\
-            \"val_ip\":false,\
-            \"val_op\":false\
-        },\
-        {\
-            \"dev_type\":7,\
-            \"dev_name\":\"DHT22_temp_humi_riken\",\
-            \"id_room\":\"\",\
-            \"id_item\":16,\
-            \"gpio\":21\
         }\
     ],\
     \"config_id\":\"1234567\",\

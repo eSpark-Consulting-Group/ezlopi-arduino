@@ -54,6 +54,7 @@
  * 8. EzloPi Sensors and Device Specific eg. ezlopi_device_0001_digitalout_generic
  */
 #include <Arduino.h>
+#include "BLEUUID.h"
 #include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
 #include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"
