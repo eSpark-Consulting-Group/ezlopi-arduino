@@ -543,7 +543,7 @@ static int ezlopi_service_uart_chip_info(cJSON *parent)
         esp_chip_info_t chip_info;
         char chip_revision[10];
         esp_chip_info(&chip_info);
-        sprintf(chip_revision, "%.2f", (float)(chip_info.revision / 100.0));
+        sprintf(chip_revision, "%.2f", (float)(chip_info.full_revision / 100.0));
         cJSON_AddStringToObject(__FUNCTION__, cj_chip, ezlopi_type_str, EZPI_CORE_info_get_chip_type_to_name(chip_info.model));
         cJSON_AddStringToObject(__FUNCTION__, cj_chip, ezlopi_version_str, chip_revision);
         ret = 1;

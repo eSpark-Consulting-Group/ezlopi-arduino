@@ -160,15 +160,21 @@ static void ezlopi_ble_basic_init(void)
     }
 
     // dump("ble_device_name", ble_device_name, 0, sizeof(ble_device_name));
-    ESP_LOGE("", "---------------- Ash %d", esp_bt_controller_get_status());
+    
     static esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
+#ifndef CONFIG_CLASSIC_BT_ENABLED
     ESP_ERROR_CHECK(esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT));
+#endif
     CHECK_PRINT_ERROR(esp_bt_controller_init(&bt_cfg), "initialize controller failed");
 
 #if defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32C3)
     CHECK_PRINT_ERROR(esp_bt_controller_enable(ESP_BT_MODE_BLE), "enable controller failed");
 #elif defined(CONFIG_IDF_TARGET_ESP32)
+#ifndef CONFIG_CLASSIC_BT_ENABLED
     CHECK_PRINT_ERROR(esp_bt_controller_enable(ESP_BT_MODE_BLE), "enable controller failed");
+#else
+CHECK_PRINT_ERROR(esp_bt_controller_enable(ESP_BT_MODE_BTDM), "enable ESP_BT_MODE_BTDM controller failed");
+#endif
 #endif
 
     CHECK_PRINT_ERROR(esp_bluedroid_init(), "init bluetooth failed");
