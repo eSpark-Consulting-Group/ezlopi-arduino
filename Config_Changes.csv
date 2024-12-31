@@ -1,0 +1,25 @@
+Parameter, Previous, New
+Bluetooth Controller Mode, Bluetooth Dual Mode, BLE Only
+BLE Max Connection, 3, 1
+Bluetooth event task stack size, 8192, 5120
+Bluetooth Bluedroid task stack size, 8192, 3584
+Classic Bluetooth, Enabled, Disabled
+MAX GATT Service Attributes, 100, 50
+Include GATTC client module(GATTC), Enabled, Disabled
+Enable BLE multi-connections, Enabled, Disabled
+BT/BLE will first malloc from PSRAM, Dsabled, Enabled
+SPI configuration, Disabled, Place SPI master ISR mfunction into IRAM
+Max Number of WiFi static RX buffers, 8, 4
+Max number of WiFi dunamic RX buffes, 32, 8
+WiFi CSI, Enabled, Disabled
+WiFi SoftAP Support, Enabled, Disabled
+Bootloader Optimization Level, Size, Debug
+Enable app rollback, Enabled, Disabled
+Skip image validation when exiting deep sleep
+Bluetooth modem sleep, Enabled, Disabled
+BLE adv report flow control supported, Enabled, Disabled
+ESP BLE Mesh Support, Enabled, Disabled
+Inter-Processor Call (IPC) task stack size, 1024, 1536
+Event loop task stack size, 2048, 3072
+Main task stack size, 4096, 3584
+High-resolution timer task stack size, 4096, 3584
