@@ -132,6 +132,8 @@ void trace_color_print(const char *txt_color, uint8_t severity, const char *file
 
 #endif // ENABLE_TRACE
 
+#ifdef CONFIG_EZPI_OPENTELEMETRY_ENABLE_LOGS
+
 static uint32_t max_otel_log_length = 0;
 static f_otel_log_upcall_t otel_log_upcall_func = NULL;
 
@@ -158,3 +160,4 @@ void ezlopi_util_log_otel(uint8_t severity, const char *file, int line, const ch
         }
     }
 }
+#endif // CONFIG_EZPI_OPENTELEMETRY_ENABLE_LOGS
