@@ -57,10 +57,8 @@ void ezlopi_ble_service_init(void)
     ezlopi_ble_service_provisioning_init();
     ezlopi_ble_service_device_info_init();
     ezlopi_ble_service_dynamic_config_init();
-    TRACE_E("TEST--------2");
     // ezlopi_ble_profile_print();
     ezlopi_ble_basic_init();
-    TRACE_E("TEST--------3");
     CHECK_PRINT_ERROR(esp_ble_gatts_app_register(BLE_WIFI_SERVICE_HANDLE), "gatts 'wifi-app' register error");
     CHECK_PRINT_ERROR(esp_ble_gatts_app_register(BLE_SECURITY_SERVICE_HANDLE), "gatts 'security-app' register error");
     CHECK_PRINT_ERROR(esp_ble_gatts_app_register(BLE_PROVISIONING_ID_HANDLE), "gatts 'provisioning-app' register error");
@@ -145,7 +143,6 @@ static void ezlopi_ble_basic_init(void)
     // snprintf(ble_device_name, sizeof(ble_device_name), "ezlopi_%llu", ezlopi_factory_info_v3_get_id());
 
     const char* device_type = ezlopi_factory_info_v3_get_device_type();
-    TRACE_E("TEST--------21");
 
     if ((1 == ezlopi_factory_info_v3_get_provisioning_status()) && (NULL != device_type))
     {
@@ -159,7 +156,6 @@ static void ezlopi_ble_basic_init(void)
         snprintf(ble_device_name, sizeof(ble_device_name), "ezlopi_%02x%02x%02x%02x%02x%02x",
             mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
     }
-    TRACE_E("TEST--------22");
 
     // dump("ble_device_name", ble_device_name, 0, sizeof(ble_device_name));
     
@@ -167,9 +163,7 @@ static void ezlopi_ble_basic_init(void)
     ESP_ERROR_CHECK(esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT));
 #ifndef CONFIG_CLASSIC_BT_ENABLED
 #endif
-    TRACE_E("TEST--------23");
     CHECK_PRINT_ERROR(esp_bt_controller_init(&bt_cfg), "initialize controller failed");
-    TRACE_E("TEST--------24");
 
 #if defined(CONFIG_IDF_TARGET_ESP32S3) || defined(CONFIG_IDF_TARGET_ESP32C3)
 #ifdef CONFIG_BTDM_CONTROLLER_MODE_BTDM
@@ -183,18 +177,11 @@ static void ezlopi_ble_basic_init(void)
 #else
     CHECK_PRINT_ERROR(esp_bt_controller_enable(ESP_BT_MODE_BLE), "enable controller failed");
 #endif
-    TRACE_E("TEST--------25");
 #endif
-    TRACE_E("Free heap before bluedroid init: %d", esp_get_free_heap_size());
     CHECK_PRINT_ERROR(esp_bluedroid_init(), "init bluetooth failed");
-    TRACE_E("Free heap after bluedroid init: %d", esp_get_free_heap_size());
-    TRACE_E("TEST--------26");
     CHECK_PRINT_ERROR(esp_bluedroid_enable(), "enable bluetooth failed");
-    TRACE_E("TEST--------27");
     CHECK_PRINT_ERROR(esp_ble_gatts_register_callback(ezlopi_ble_gatts_event_handler), "gatts register error, error code");
-    TRACE_E("TEST--------28");
     CHECK_PRINT_ERROR(esp_ble_gap_register_callback(ezlopi_ble_gap_event_handler), "gap register error");
-    TRACE_E("TEST--------29");
     CHECK_PRINT_ERROR(esp_ble_gap_set_device_name(ble_device_name), "Set device name failed!");
 }
 
