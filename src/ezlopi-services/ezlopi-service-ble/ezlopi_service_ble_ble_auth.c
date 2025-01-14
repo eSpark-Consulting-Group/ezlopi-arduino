@@ -38,7 +38,8 @@
  */
 
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #ifdef CONFIG_EZPI_BLE_ENABLE
  // #TODO ADD guard for key enable

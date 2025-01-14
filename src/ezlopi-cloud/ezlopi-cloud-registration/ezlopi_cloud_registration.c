@@ -43,7 +43,7 @@
 #include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 #include "ezlopi-util/ezlopi-util-version/ezlopi_util_version.h"
 
-#include "ezlopi_core_sntp.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
 #include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 #include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
 #include "ezlopi-core/ezlopi-core-event-group/ezlopi_core_event_group.h"

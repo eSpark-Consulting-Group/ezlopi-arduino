@@ -53,7 +53,7 @@
 #include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
 #include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
 
-#include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
+#include "ezlopi-util/ezlopi-util-version/ezlopi_util_version.h"
 
 /*******************************************************************************
  *                          Extern Data Declarations

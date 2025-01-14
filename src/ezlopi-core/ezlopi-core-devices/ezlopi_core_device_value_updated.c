@@ -47,6 +47,7 @@
 #include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"
 #include "ezlopi-core/ezlopi-core-devices/ezlopi_core_devices_list.h"
 #include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
 
 #include "ezlopi-cloud/ezlopi-cloud-items/ezlopi_cloud_items.h"
 #include "ezlopi-cloud/ezlopi-cloud-settings/ezlopi_cloud_settings.h"

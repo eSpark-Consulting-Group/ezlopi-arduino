@@ -45,7 +45,7 @@
 // #include <stdbool.h>
 // #include <stdint.h>
 // #include <ctype.h>
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 
 #include "ezlopi_core_scenes_methods.h"
 

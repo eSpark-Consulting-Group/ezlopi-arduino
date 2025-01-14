@@ -48,7 +48,8 @@
 extern "C"
 {
 #endif
-    voi
+
+    /**
      * @brief Function to respond to hub.items.list method
      *
      * @param cj_request Incoming JSON request

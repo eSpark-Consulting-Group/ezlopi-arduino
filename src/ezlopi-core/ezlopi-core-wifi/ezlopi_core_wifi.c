@@ -55,7 +55,7 @@
 #include "lwip/err.h"
 #include "lwip/sys.h"
 
-#include "cjext.h"
+#include "ezlopi-components/cjext/cjext.h"
 #include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
 #include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"

@@ -2,77 +2,90 @@
 #include <esp_mac.h>
 #include "ezlopi.h"
 
+SET_LOOP_TASK_STACK_SIZE( 2*1024 ); // 16KB
+
 static void __print_mac_address(void);
 static void __blinky(void *pv);
 
-void setup(void) {
-#ifdef CONFIG_EZPI_UTIL_TRACE_EN
-  ezlopi_core_set_log_upcalls();
-#endif  // CONFIG_EZPI_UTIL_TRACE_EN
+void setup(void)
+{
 
-  __print_mac_address();
+#ifdef CONFIG_EZPI_UTIL_TRACE_EN
+    EZPI_core_set_log_upcalls();
+#endif // CONFIG_EZPI_UTIL_TRACE_EN
+
+    __print_mac_address();
 
 #ifdef CONFIG_EZPI_ENABLE_LED_INDICATOR
-  ezlopi_service_led_indicator_init();
-#endif  // CONFIG_EZPI_ENABLE_LED_INDICATOR
+    EZPI_service_led_indicator_init();
+#endif // CONFIG_EZPI_ENABLE_LED_INDICATOR
 
-  gpio_install_isr_service(0);
+    gpio_install_isr_service(0);
 
-  ezlopi_service_loop_init();
-  ezlopi_service_gpioisr_init();  // this is time critical, Do not add to loop
+    EZPI_service_loop_init();
+    EZPI_service_gpioisr_init(); // this is time critical, Do not add to loop
 
-  ezlopi_init();
+    EZPI_init();
 
-  ezlopi_core_setting_commands_read_settings();
+    EZPI_core_setting_commands_read_settings();
 
-  EZPI_SERV_uart_init();
+    EZPI_SERV_uart_init();
 
 #if !defined(CONFIG_IDF_TARGET_ESP32) && !defined(CONFIG_IDF_TARGET_ESP32C3)
-  EZPI_SERV_cdc_init();
-#endif  // NOT defined CONFIG_IDF_TARGET_ESP32 or CONFIG_IDF_TARGET_ESP32C3
+    EZPI_SERV_cdc_init();
+#endif // NOT defined CONFIG_IDF_TARGET_ESP32 or CONFIG_IDF_TARGET_ESP32C3
 
 #if defined(CONFIG_EZPI_BLE_ENABLE)
-  ezlopi_ble_service_init();
+    EZPI_ble_service_init();
 #endif
 
 #if defined(CONFIG_EZPI_SERV_ENABLE_MODES)
-  ezlopi_service_modes_init();
+    ezlopi_service_modes_init();
 #endif
 
 #if defined(CONFIG_EZPI_SERV_ENABLE_MESHBOTS)
-  ezlopi_scenes_meshbot_init();
+    EZPI_scenes_meshbot_init();
 #endif
 
-  TaskHandle_t ezlopi_main_blinky_task_handle = NULL;
+    TaskHandle_t ezlopi_main_blinky_task_handle = NULL;
 
 #if defined(CONFIG_EZPI_HEAP_ENABLE)
-  xTaskCreate(__blinky, "blinky", 3 * EZLOPI_MAIN_BLINKY_TASK_DEPTH, NULL, 1, &ezlopi_main_blinky_task_handle);
-  ezlopi_core_process_set_process_info(ENUM_EZLOPI_MAIN_BLINKY_TASK, &ezlopi_main_blinky_task_handle, 3 * EZLOPI_MAIN_BLINKY_TASK_DEPTH);
+    xTaskCreate(__blinky, "blinky", 10 * EZLOPI_MAIN_BLINKY_TASK_DEPTH, NULL, 1, &ezlopi_main_blinky_task_handle);
+
+#if defined(CONFIG_FREERTOS_USE_TRACE_FACILITY)
+    EZPI_core_process_set_process_info(ENUM_EZLOPI_MAIN_BLINKY_TASK, &ezlopi_main_blinky_task_handle, 3 * EZLOPI_MAIN_BLINKY_TASK_DEPTH);
+#endif
 #else
-  xTaskCreate(__blinky, "blinky", EZLOPI_MAIN_BLINKY_TASK_DEPTH, NULL, tskIDLE_PRIORITY + 2, &ezlopi_main_blinky_task_handle);
-  ezlopi_core_process_set_process_info(ENUM_EZLOPI_MAIN_BLINKY_TASK, &ezlopi_main_blinky_task_handle, EZLOPI_MAIN_BLINKY_TASK_DEPTH);
+    xTaskCreate(__blinky, "blinky", EZLOPI_MAIN_BLINKY_TASK_DEPTH, NULL, tskIDLE_PRIORITY + 2, &ezlopi_main_blinky_task_handle);
+
+#if defined(CONFIG_FREERTOS_USE_TRACE_FACILITY)
+    EZPI_core_process_set_process_info(ENUM_EZLOPI_MAIN_BLINKY_TASK, &ezlopi_main_blinky_task_handle, EZLOPI_MAIN_BLINKY_TASK_DEPTH);
 #endif
 
-  ezlopi_service_otel_init();
+#endif
 
-  ezlopi_wait_for_wifi_to_connect(portMAX_DELAY);
+#ifdef CONFIG_EZPI_ENABLE_OPENTELEMETRY
+    ezlopi_service_otel_init();
+#endif // CONFIG_EZPI_ENABLE_OPENTELEMETRY
+
+    EZPI_core_wait_for_wifi_to_connect(portMAX_DELAY);
 #if defined(CONFIG_EZPI_LOCAL_WEBSOCKET_SERVER) || defined(CONFIG_EZPI_WEBSOCKET_CLIENT)
-  ezlopi_service_broadcast_init();
+    EZPI_service_broadcast_init();
 #endif
 
 #if defined(CONFIG_EZPI_LOCAL_WEBSOCKET_SERVER)
-  ezlopi_service_ws_server_start();
-#else   // CONFIG_EZPI_LOCAL_WEBSOCKET_SERVER
-  ezlpi_service_ws_server_dummy();
-#endif  // CONFIG_EZPI_LOCAL_WEBSOCKET_SERVER
+    EZPI_service_ws_server_start();
+#else  // CONFIG_EZPI_LOCAL_WEBSOCKET_SERVER
+    EZPI_service_ws_server_dummy();
+#endif // CONFIG_EZPI_LOCAL_WEBSOCKET_SERVER
 
 #if defined(CONFIG_EZPI_WEBSOCKET_CLIENT)
-  ezlopi_service_web_provisioning_init();
+    EZPI_service_web_provisioning_init();
 #endif
 
 #ifdef CONFIG_EZPI_ENABLE_OTA
-  ezlopi_service_ota_init();
-#endif  // CONFIG_EZPI_ENABLE_OTA
+    EZPI_service_ota_init();
+#endif // CONFIG_EZPI_ENABLE_OTA
 }
 
 void loop() {
@@ -86,64 +99,77 @@ static void __print_mac_address(void) {
   esp_read_mac(__base_mac, ESP_MAC_WIFI_STA);
 }
 
-static void __blinky(void *pv) {
-  uint32_t low_heap_start_time = xTaskGetTickCount();
+static void __blinky(void *pv)
+{
+    uint32_t low_heap_start_time = xTaskGetTickCount();
 
-  while (1) {
-    uint32_t free_heap = esp_get_free_heap_size();
-    uint32_t watermark_heap = esp_get_minimum_free_heap_size();
-    uint32_t free_heap_internal = esp_get_free_internal_heap_size();
-
-    uint32_t total_heap_size = heap_caps_get_total_size(MALLOC_CAP_DEFAULT);
-
-    TRACE_I("----------------------------------------------");
-    TRACE_W("Total heap:                %d B   %.4f KB", total_heap_size, total_heap_size / 1024.0);
-    TRACE_W("Free Heap Size:            %d B    %.4f KB", free_heap, free_heap / 1024.0);
-    TRACE_W("Heap Watermark:            %d B    %.4f KB", watermark_heap, watermark_heap / 1024.0);
-    TRACE_I("----------------------------------------------");
-
-    ezlopi_wifi_status_t *wifi_stat = ezlopi_wifi_status();
-    if (wifi_stat) {
-      if (wifi_stat->wifi_connection == false) {
-        char *ssid = ezlopi_factory_info_v3_get_ssid();
-        if (ssid) {
-          TRACE_E("Failed to connect to AP : %s, retrying ...", ssid);
-          ezlopi_free(__FUNCTION__, ssid);
-        } else {
-          TRACE_E("ERROR : WiFi Details not set !");
-        }
-      }
-      ezlopi_free(__FUNCTION__, wifi_stat);
-    }
-
-    // separating the scope
-#ifdef CONFIG_EZPI_ENABLE_UART_PROVISIONING
+    while (1)
     {
-      char cmd99_str[100] = { 0 };
-      snprintf(cmd99_str, 100, "{\"cmd\":99,\"free_heap\":%d,\"heap_watermark\":%d}", free_heap, watermark_heap);
-      EZPI_SERV_uart_tx_data(strlen(cmd99_str), (uint8_t *)cmd99_str);
-      TRACE_OTEL(ENUM_EZLOPI_TRACE_SEVERITY_DEBUG, "%s", cmd99_str);
-    }
+        uint32_t free_heap = esp_get_free_heap_size();
+        uint32_t watermark_heap = esp_get_minimum_free_heap_size();
+
+#ifdef CONFIG_EZPI_UTIL_TRACE_EN
+        uint32_t total_heap_size = heap_caps_get_total_size(MALLOC_CAP_DEFAULT);
+
+        TRACE_I("----------------------------------------------");
+        TRACE_W("Total heap:                %d B   %.4f KB", total_heap_size, total_heap_size / 1024.0);
+        TRACE_W("Free Heap Size:            %d B    %.4f KB", free_heap, free_heap / 1024.0);
+        TRACE_W("Heap Watermark:            %d B    %.4f KB", watermark_heap, watermark_heap / 1024.0);
+        TRACE_I("----------------------------------------------");
 #endif
 
-    if (free_heap <= (10 * 1024)) {
-      TRACE_W("CRITICAL-WARNING: low heap detected..");
+        ezlopi_wifi_status_t *wifi_stat = EZPI_core_wifi_status();
+        if (wifi_stat)
+        {
+            if (wifi_stat->wifi_connection == false)
+            {
+                char *ssid = EZPI_core_factory_info_v3_get_ssid();
+                if (ssid)
+                {
+                    TRACE_E("Failed to connect to AP : %s, retrying ...", ssid);
+                    ezlopi_free(__FUNCTION__, ssid);
+                }
+                else
+                {
+                    TRACE_E("ERROR : WiFi Details not set !");
+                }
+            }
+            ezlopi_free(__FUNCTION__, wifi_stat);
+        }
 
-      if ((xTaskGetTickCount() - low_heap_start_time) > (15000 / portTICK_PERIOD_MS)) {
-        vTaskDelay(2000 / portTICK_RATE_MS);
-        TRACE_E("CRITICAL-ERROR: low heap time-out detected!");
-        TRACE_W("Rebooting.....");
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-        EZPI_CORE_reset_reboot();
-      }
-    } else {
-      low_heap_start_time = xTaskGetTickCount();
-    }
+        // separating the scope
+#ifdef CONFIG_EZPI_ENABLE_UART_PROVISIONING
+        {
+            char cmd99_str[100] = {0};
+            snprintf(cmd99_str, 100, "{\"cmd\":99,\"free_heap\":%d,\"heap_watermark\":%d}", free_heap, watermark_heap);
+            EZPI_SERV_uart_tx_data(strlen(cmd99_str), (uint8_t *)cmd99_str);
+            TRACE_OTEL(ENUM_EZLOPI_TRACE_SEVERITY_DEBUG, cmd99_str);
+        }
+#endif
+
+        if (free_heap <= (10 * 1024))
+        {
+            TRACE_W("CRITICAL-WARNING: low heap detected..");
+            TRACE_OTEL(ENUM_EZLOPI_TRACE_SEVERITY_WARNING, "Critical-warning: low heap detected!, free-heap: %.02f KB", free_heap / 1024.0);
+
+            if ((xTaskGetTickCount() - low_heap_start_time) > (15000 / portTICK_PERIOD_MS))
+            {
+                vTaskDelay(2000 / portTICK_RATE_MS);
+                TRACE_E("CRITICAL-ERROR: low heap time-out detected!");
+                TRACE_W("Rebooting.....");
+                vTaskDelay(1000 / portTICK_PERIOD_MS);
+                EZPI_core_reset_reboot();
+            }
+        }
+        else
+        {
+            low_heap_start_time = xTaskGetTickCount();
+        }
 
 #ifdef CONFIG_EZPI_HEAP_ENABLE
-    ezlopi_util_heap_trace(false);
-    ezlopi_util_heap_flush();
-#endif  // CONFIG_EZPI_HEAP_ENABLE
-    vTaskDelay(10000 / portTICK_PERIOD_MS);
-  }
+        EZPI_core_util_heap_trace(false);
+        EZPI_core_util_heap_flush();
+#endif // CONFIG_EZPI_HEAP_ENABLE
+        vTaskDelay(10000 / portTICK_PERIOD_MS);
+    }
 }

@@ -38,8 +38,8 @@
 ** ===========================================================================
 */
 
-#include "../../build/config/sdkconfig.h"
-#include "EZLOPI_USER_CONFIG.h"
+#include <sdkconfig.h>
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #include <esp_mac.h>
 #include <esp_wifi_types.h>

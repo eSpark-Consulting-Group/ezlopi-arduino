@@ -1,7 +1,8 @@
 #ifndef __EZLOPI_SERVICE_OTEL_H__
 #define __EZLOPI_SERVICE_OTEL_H__
 
-#include "../../build/config/sdkconfig.h"
+#include <sdkconfig.h>
+#include "ezlopi-user-config/EZLOPI_USER_CONFIG.h"
 
 #ifdef CONFIG_EZPI_ENABLE_OPENTELEMETRY
 #include "ezlopi-core/ezlopi-core-log/ezlopi_core_log.h"

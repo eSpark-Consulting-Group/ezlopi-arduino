@@ -49,7 +49,7 @@ extern "C"
 {
 #endif
 
-    void network_get(cJSON* cj_request, cJSON* cj_response);
+    /**
      * @brief Function to respond to hub.network.get method
      *
      * @param cj_request Incoming JSON request

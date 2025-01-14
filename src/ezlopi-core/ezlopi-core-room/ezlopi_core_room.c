@@ -45,6 +45,7 @@
 #include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
 #include "ezlopi-core/ezlopi-core-nvs/ezlopi_core_nvs.h"
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
 #include "ezlopi-core/ezlopi-core-room/ezlopi_core_room.h"
 #include "ezlopi-core/ezlopi-core-cloud/ezlopi_core_cloud.h"
 #include "ezlopi-core/ezlopi-core-ezlopi/ezlopi_core_broadcast.h"

@@ -50,7 +50,7 @@
 #include <freertos/task.h>
 #include <freertos/semphr.h>
 
-#include "ezlopi_cloud_constants.h"
+#include "ezlopi-cloud/ezlopi-cloud-constants/ezlopi_cloud_constants.h"
 
 #include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
 #include "ezlopi-core/ezlopi-core-buffer/ezlopi_core_buffer.h"

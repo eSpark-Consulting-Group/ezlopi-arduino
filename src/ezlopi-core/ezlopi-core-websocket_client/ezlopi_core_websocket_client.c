@@ -48,6 +48,7 @@
 
 #include "ezlopi-util/ezlopi-util-trace/ezlopi_util_trace.h"
 
+#include "ezlopi-core/ezlopi-core-sntp/ezlopi_core_sntp.h"
 #include "ezlopi-core/ezlopi-core-factory-info/ezlopi_core_factory_info.h"
 #include "ezlopi-core/ezlopi-core-websocket_client/ezlopi_core_websocket_client.h"
 #include "ezlopi-core/ezlopi-core-errors/ezlopi_core_errors.h"

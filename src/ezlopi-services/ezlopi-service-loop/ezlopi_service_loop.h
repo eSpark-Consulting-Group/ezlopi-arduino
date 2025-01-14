@@ -40,7 +40,7 @@
 #ifndef _EZLOPI_SERVICE_TIMER_H_
 #define _EZLOPI_SERVICE_TIMER_H_
 
-#ifdef __cpluscplus
+#ifdef __cplusplus
 extern "C"
 {
 #endif
@@ -72,7 +72,7 @@ extern "C"
      */
     void EZPI_service_loop_add(const char *name, f_loop_t loop, uint32_t period_ms, void *arg);
 
-#ifdef __cpluscplus
+#ifdef __cplusplus
 }
 #endif
 
